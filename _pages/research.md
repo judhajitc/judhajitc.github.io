@@ -5,19 +5,33 @@ classes: wide
 permalink: /research/
 ---
 
-[**Research statement**](https://satyaki4.github.io/files/research_statement_satyaki.pdf)
-
 ## Job Market Paper
 
-**America Invents Act and innovation by small entities**. 2023.
-<br/><small>[Draft](https://satyaki4.github.io/files/JMP_satyaki.pdf)</small><br>
+**Clouds of Comparison: Exploring the Impact of Covariate Shocks on Perceived Relative Deprivation and the Role of Social Policies in Peru**. 2023.
+<br/><small>[Draft Coming Soon]</small><br>
 <small>
-This paper studies patenting activity by small U.S. entities before and after the passage of the Leahy-Smith America Invents Act (AIA) of 2011 which changed the patenting rule in the United States from a first-to-invent to a first-inventor-to-file. The AIA's goals were to encourage patenting and provide certainty by curbing litigation. Contrary to the AIA's intentions, the results indicate a decline in patenting activity post-AIA for all entities, and a widened gap between the small and large entities when compared to the pre-AIA period. Moreover, entities with a greater exposure to litigation drop their patenting activity as compared to the entities with a lower exposure, and among the exposed, the small entities report a further drop in their activity. Prior to the AIA, entities had the benefit of flexibility on when to file for patents but this benefit came at a cost; it created uncertainty in an atmosphere of litigative behavior about the date of the invention. To check litigation, the AIA encouraged early disclosure of inventions, but this added to the already constrained budget of the small entities. This paper contributes in the following way: first, studies the effects of the AIA on small entities and empirically tests its predictions laid out prior to the legislation's enactment, and second, adds clarity to the understanding of the costs and benefits that the smaller entities face while innovating and their differences with the larger entities.
+Perceptions of relative deprivation affects a range of outcomes like preference for redistribution, political
+discontent and attitudes and trust outcomes. I ask whether covariate shocks in the form of positive rainfall
+shocks can change perceptions of relative deprivation? Using a household level panel data and within
+household variation in exposure to extreme rainfall shocks, this paper provides novel empirical evidence
+on covariate shocks and perceived relative deprivation, in the context of a developing country- Peru. I find
+that an exposure to extreme rainfall shocks increases the likelihood of perceiving own standard of living
+to be worse off relative to the other households in the locality or community, conditional on household,
+month of interview and year fixed effects and household level controls. This is most likely explained
+by the differential effect of weather shocks across objective outcomes which translates into an increase
+in relative deprivation, as well as, misperceptions about the losses of other households within a locality.
+Social protection programs or redistributory policies like the direct cash transfer program- the Peruvian
+Juntos, and in-kind food assistance programs play an important role in attenuating the effect of rainfall
+shocks on perceived relative deprivation. Results are robust to a range of harmful thresholds of rainfall
+shocks, other alternate measures of shock, controlling for household specific idiosyncratic shocks and on
+a large cross-sectional data with exploiting both within-conglomerate and within-district variations. Key
+findings from this study could generate interest in identifying changes in perceived relative deprivation as
+an alternate channel to determining important socio-political outcomes, alongside changes in levels of income.
 </small>
 
 ## Working Papers
-**Geography of innovation in India**. 2023. (with [Nishant Chadha](https://www.idfresearch.org/team))
-<br/><small>Draft coming soon!</small><br>
+**When the Temperature Drops, Perceptions Worsen: Effects of Extreme Cold on Perceptions of Government and Civic Participation in the Peruvian Highlands**. 2023. (with Leah Lakdawala and Eduardo Nakasone)
+<br/><small>()</small><br>
 <small>
 This paper describes and uses a novel data set on patent applications from India between 2000 and 2016 to understand the spatial pattern of innovation in India and its evolution over time. Identification of such patterns of innovation over time is important as it helps us understand what motivates certain areas to be more innovative than others. Documentation of such patterns was absent to date as the addresses of patentees were not granular. We alleviate this by creating patent-level data using Intellectual Property India's public search tool that helps us add information over traditional data sources. We find that the concentration of patenting has decreased over time, with patents emerging from newer geographies. We also find that the inventors have a lower geographical concentration than patent assignees. The diffusion of innovation depends on geographical closeness to innovative regions and the absorbent capacity of the newly innovating region.
 </small>
