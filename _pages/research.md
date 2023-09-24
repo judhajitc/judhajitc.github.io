@@ -10,23 +10,7 @@ permalink: /research/
 **Clouds of Comparison: Exploring the Impact of Covariate Shocks on Perceived Relative Deprivation and the Role of Social Policies in Peru**. 2023.
 <br/><small>[Draft Coming Soon]</small><br>
 <small>
-Perceptions of relative deprivation affects a range of outcomes like preference for redistribution, political
-discontent and attitudes and trust outcomes. I ask whether covariate shocks in the form of positive rainfall
-shocks can change perceptions of relative deprivation? Using a household level panel data and within
-household variation in exposure to extreme rainfall shocks, this paper provides novel empirical evidence
-on covariate shocks and perceived relative deprivation, in the context of a developing country- Peru. I find
-that an exposure to extreme rainfall shocks increases the likelihood of perceiving own standard of living
-to be worse off relative to the other households in the locality or community, conditional on household,
-month of interview and year fixed effects and household level controls. This is most likely explained
-by the differential effect of weather shocks across objective outcomes which translates into an increase
-in relative deprivation, as well as, misperceptions about the losses of other households within a locality.
-Social protection programs or redistributory policies like the direct cash transfer program- the Peruvian
-Juntos, and in-kind food assistance programs play an important role in attenuating the effect of rainfall
-shocks on perceived relative deprivation. Results are robust to a range of harmful thresholds of rainfall
-shocks, other alternate measures of shock, controlling for household specific idiosyncratic shocks and on
-a large cross-sectional data with exploiting both within-conglomerate and within-district variations. Key
-findings from this study could generate interest in identifying changes in perceived relative deprivation as
-an alternate channel to determining important socio-political outcomes, alongside changes in levels of income.
+Perceptions of relative deprivation affect a range of outcomes, such as preferences for redistribution, political discontent, and attitudes and trust outcomes. I test whether covariate shocks in the form of positive rainfall shocks can change perceptions of relative deprivation. Using household-level longitudinal data for Peru, I exploit within-household variation in exposure to extreme rainfall shocks and provide novel empirical evidence on the effect of covariate shocks on perceived relative deprivation in the context of a developing country. I find that exposure to extreme rainfall shocks increases the likelihood that individuals perceive their own standard of living to be worse off relative to the other households in the locality or community. This could be explained by the differential effect of weather shocks across objective outcomes, as well as misperceptions about the losses of other households within a locality. Social protection programs (such as conditional cash transfers) and in-kind food assistance programs play an important role in attenuating the effect of rainfall shocks on perceived relative deprivation. Results are robust to a range of harmful thresholds of rainfall shocks, alternative measures of rainfall shocks, controlling for household-specific idiosyncratic shocks and on a large cross-sectional data with exploiting both within-conglomerate and within-district variations. Key findings from this study could generate interest in identifying changes in perceived relative deprivation as an alternative channel to determining important socio-political outcomes, alongside changes in levels of income.
 </small>
 
 ## Working Papers
