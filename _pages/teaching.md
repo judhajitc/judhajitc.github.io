@@ -19,3 +19,7 @@ Instructor, Spring 2023
 
 ### AFRE 303:  Managerial Economics
 Instructor, Summer 2023 
+
+### AFRE 203:  Data Analysis for the Agri-Food System
+Teaching Assistant, Fall 2021 
+
