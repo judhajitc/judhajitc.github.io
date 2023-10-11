@@ -45,7 +45,7 @@ How did the COVID-19 pandemic lead to changes in voting behavior? Are these chan
 drop in confidence or trust in political institutions? Using within district variation in COVID-19 incidence,
 this paper provides empirical evidence to these questions for a developing country context, Peru. Studying the
 2021 Presidential elections in Peru, we find that- conditional on district and election-year fixed effects and a
-set of potentially confounding variables â districts with a higher incidence of COVID-19 before the elections,
+set of potentially confounding variables-- districts with a higher incidence of COVID-19 before the elections,
 shifted their votes towards left leaning parties. This effect is largest for incidence of COVID-19 three months
 and 4-6 months before the election. This result can most likely be explained by examining changes in voter
 turnout, and confidence or trust in political institutions.
