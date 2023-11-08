@@ -51,4 +51,9 @@ and 4-6 months before the election. This result can most likely be explained by 
 turnout, and confidence or trust in political institutions.
 </small>
 
+## Pre-Ph.D. Publications
+
+**Has India Deindustrialised *Prematurely*? A Disaggregated Analysis**.(with R. Nagaraj) Economic and Political Weekly, 2020, Vol. 48. <br/><small>[Paper]</small><br>
+
+
 
