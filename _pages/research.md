@@ -53,7 +53,11 @@ turnout, and confidence or trust in political institutions.
 
 ## Pre-Ph.D. Publications
 
-**Has India Deindustrialised *Prematurely*? A Disaggregated Analysis**.(with R. Nagaraj) Economic and Political Weekly, 2020, Vol. 48. <br/><small>[Paper]</small><br>
+**Continued Misery or a Change in Fortune? The Case of the Howrah Foundry Industry**. *Book Chapter in Industrialisation for Employment and Growth in India, Cambridge University Press, 2021* <br/><small>[Book Chapter](https://www.cambridge.org/core/books/industrialisation-for-employment-and-growth-in-india/C038DB4557F1361E61C47276BAB2DBB7)</small><br>
 
+**Has India Deindustrialised *Prematurely*? A Disaggregated Analysis**.(with R. Nagaraj) *Economic and Political Weekly, 2020.* <br/><small>[Paper](https://judhajitc.github.io/files/HasIndiaDeindustrialisedPrematurelyEPW.pdf)</small><br>
 
+**Land as Collateral in India**.(with Sudha Narayanan) *Economic and Political Weekly, 2019.* <br/><small>[Paper](https://judhajitc.github.io/files/LandascollateralinIndia.pdf)</small><br>
+
+**An Unequal Process of Urbanization**. *Economic and Political Weekly, 2017.* <br/><small>[Paper](https://judhajitc.github.io/files/NO_LII_9_04032017_Judhajit_Chakraborty-EPW.pdf)</small><br>
 
