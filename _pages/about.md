@@ -9,7 +9,7 @@ redirect_from:
 
 Welcome! 
 
-I am a Ph.D. Candidate at the Department of Agricultural, Food, and Resource Economics at Michigan State University. I conduct applied economic research at the intersection of environment, agriculture, and political economy. 
+I am a Postdoctoral Fellow at the Department of Agricultural and Resource Economics, Colorado State University. I received my Ph.D. from the Department of Agricultural, Food, and Resource Economics at Michigan State University. I conduct applied economic research at the intersection of environment, agriculture, and political economy. 
 
 <!---My [**job market paper**](https://judhajitc.github.io/files/JMP Judhajit Chakraborty.pdf) studies the effect of covariate shock- like excess rainfall on perceived relative deprivation.Thank you very much for dropping by!--->
 
