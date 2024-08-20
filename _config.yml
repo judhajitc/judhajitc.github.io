@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Judhajit Chakraborty"
 title_separator          : "-"
 name                     : &name "Judhajit Chakraborty"
-description              : &description "Ph.D. Candidate at Department of Agricultural, Food and Resource Economics, Michigan State University"
+description              : &description "Postdoctoral Fellow at Department of Agricultural and Resource Economics, Colorado State University"
 url                      : https://judhajitc.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "judhajitc.github.io"
@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Judhajit Chakraborty"
   avatar           : "CB1_5798.JPG"
-  bio              : "Ph.D. Candidate, Department of Agricultural, Food and Resource Economics, Michigan State University"
-  location         : "Michigan State University"
+  bio              : "Postdoctoral Fellow, Department of Agricultural and Resource Economics, Colorado State University"
+  location         : "Colorado State University"
   employer         :
   pubmed           : 
   googlescholar    :
