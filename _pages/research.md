@@ -5,17 +5,15 @@ classes: wide
 permalink: /research/
 ---
 
-## Job Market Paper
-
+## Working Papers
 **Downpours of Deprivation: Exploring the Impact of Excess Rainfall Shocks on Perceived Relative Deprivation in Peru**. 2023. *[Blog: Economics That Really Matters](https://www.econthatmatters.com/2023/12/downpours-of-deprivation-exploring-the-impact-of-excess-rainfall-shocks-on-perceived-relative-deprivation-in-peru/)*
-<br/><small>*Recent Presentations: **2024 Annual SEEDS Conference (Georgia Tech); Midwest International Economic Development Conference (University of Chicago); Seminario MAP (Online); Pacific Conference for Development Economics (PacDev) 2024 (Stanford King Center on Global Development); Agricutural and Applied Economics Association (AAEA) Annual Meetings 2023;  Development Lunch Fall 2023 (Department of AFRE & Economics, Michigan State University)*** </small>
+<br/><small>*Recent Presentations: **2024 DARE Seminar Series (Colorado State); 2024 Annual SEEDS Conference (Georgia Tech); Midwest International Economic Development Conference (University of Chicago); Seminario MAP (Online); Pacific Conference for Development Economics (PacDev) 2024 (Stanford King Center on Global Development); Agricutural and Applied Economics Association (AAEA) Annual Meetings 2023;  Development Lunch Fall 2023 (Department of AFRE & Economics, Michigan State University)*** </small>
 <br/><small>[Draft](https://judhajitc.github.io/files/JMP Judhajit Chakraborty.pdf)</small><br>
 <small>
 Perceptions of relative deprivation or feelings of relative poverty affect a range of economic and behavioral outcomes, such as support for redistribution, political attitudes, hostility, and risky behavior. In this paper, I test whether *covariate shocks*-like excess rainfall shocks can change perceptions of relative deprivation in a developing country context. Using household-level longitudinal data for Peru, I provide novel evidence showing that exposure to excess
 rainfall shocks increases the likelihood that households perceive their standard of living to be worse off relative to the other households in the locality. Two fundamental mechanisms could explain this- firstly, the differential effect of excess rainfall shocks across objective outcomes suggests a widening economic gap reflected in standard relative deprivation measures, and secondly, misperceptions about the losses of other households within a locality could explain the increase in perceived relative deprivation. The impact is particularly larger for historically underprivileged and less developed communities, possibly due to limited options of consumption smoothing. I show that social protection programs, such as conditional cash transfers and in-kind food assistance programs, can attenuate the effect of rainfall shocks on perceived relative deprivation. Finally, I show an association between perceived relative deprivation and political beliefs related to the functioning of democracy and support for authoritarian regimes in Peru.
 </small>
 
-## Working Papers
 **When the Temperature Drops, Perceptions Worsen: Effects of Extreme Cold on Perceptions of Government and Civic Participation in the Peruvian Highlands**. 2023. (with Leah Lakdawala and Eduardo Nakasone)
 <br/><small>[Draft](https://judhajitc.github.io/files/FrostAndDemocracy.pdf)</small><br>
 <small>
