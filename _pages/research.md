@@ -17,25 +17,14 @@ rainfall shocks increases the likelihood that households perceive their standard
 **When the Temperature Drops, Perceptions Worsen: Effects of Extreme Cold on Perceptions of Government and Civic Participation in the Peruvian Highlands**. 2023. (with Leah Lakdawala and Eduardo Nakasone) *Under Review*
 <br/><small>[Draft](https://judhajitc.github.io/files/FrostAndDemocracy.pdf)</small><br>
 <small>
-Perceptions of government and political institutions can have important effects on a wide range of outcomes, such as compliance with laws and demand for public goods. We examine how extreme weather affects individuals' belief of how well democracy functions in Peru.  We construct a unique dataset containing spatially and temporally specific cold temperature shocks and find that extreme cold reduces positive perceptions of democracy.  This translates into reductions in civic engagement in formal democratic institutions (as measured by participation in national elections) but increased involvement in local associations. We provide evidence that these effects work through several mechanisms: decreased income, assets, and expenditure as well as increased incidence of illness and some types of crime.  Finally, we find that the negative effects of extreme cold are mitigated by government provision of goods and services, namely, social programs, public hospitals, and police resources. 
+We examine how extreme weather affects individuals’ perceptions of government and political institutions in Peru. We match granular data on cold weather shocks to individuals using variation in interview date and location and find that extreme cold worsens perceptions of democracy. Further, extreme cold reduces civic engagement in formal democratic institutions
+(participation in national elections) but increases participation in local neighborhood associations. We provide evidence that these effects work through several mechanisms: economic losses, increased incidence of illness, and higher crimes. Finally, we find that greater coverage of government-provided goods and services can attenuate the adverse effects of extreme cold.
 </small>
 
 **Frosty Climate, Icy Relationships: Frosts and Intimate Partner Violence in Rural Peru**. 2023. (with Katie Bollman, Leah Lakdawala and Eduardo Nakasone) 
 <br/><small>[Draft](https://judhajitc.github.io/files/Frosts_and_IPV.pdf)</small><br>
 <small>
-Violence against women — in particular, Intimate Partner Violence (IPV) — is a major health concern for
-women across the world. In this paper, we study the impact of frosts (temperatures below 0°C / 32°F) on IPV
-among Peruvian women. Using a dataset that matches women to weather exposure, we find that overall, frost
-shocks increase IPV: 10 degree hours below -9°C increases the probability of experiencing domestic violence
-by 0.5 percentage points. These effects are larger for more extreme temperature thresholds. We provide
-evidence that frosts impact IPV through two main channels. First, extreme cold yields adverse consequences
-for income, which in turn impacts IPV. Second, extreme cold limits the mobility of individuals, potentially
-increasing exposure of women to violent partners. To our knowledge, we are the first to measure relative
-significance of these two channels by utilizing variation in frost timing to distinguish shocks that affect IPV
-through changes in income from those that act through time spent indoors. We find that the effect of frosts
-on IPV is mostly driven by frosts that occur during the growing season, when 10 degree hours below -9°C
-increase the probability of experiencing IPV by 1.5 percentage points. In contrast, we find that non-growing
-season frosts have no statistically significant effects on IPV.
+Violence against women — in particular, Intimate Partner Violence (IPV) — is a health concern for women across the world. We study the impact of extreme cold on IPV among Peruvian women. Using a dataset that matches women to weather exposure, we find that overall, frost shocks increase IPV: 10 degree hours below -9°C increases the probability of experiencing domestic violence by 0.5 pp. These effects are larger for more extreme temperature thresholds. We provide evidence that frosts impact IPV through two main channels. First, extreme cold yields adverse consequences for income, which in turn affects IPV. Second, extreme cold limits time spent outside of the household, potentially increasing exposure of women to violent partners. To our knowledge, we are the first to measure relative significance of these two channels by using variation in frost timing to distinguish shocks that affect IPV through changes in income from those that act through time spent indoors. We find that the effect of frosts on IPV is mostly driven by frosts that occur during the growing season, when 10 degree hours below -9°C increases the probability of experiencing IPV by 1.5 percentage points. In contrast, we find that non-growing season frosts have no statistically significant effects on IPV.
 </small>
 
 **Impact of COVID mortality on voting behavior: Evidence from Peru**. 2023. (with Leah Lakdawala and Eduardo Nakasone)
