@@ -39,7 +39,7 @@ and 4-6 months before the election. This result can most likely be explained by 
 turnout, and confidence or trust in political institutions.
 </small>
 
-## Pre-Ph.D. Publications
+## Pre-Ph.D. Peer-Reviewed Publications
 
 **Continued Misery or a Change in Fortune? The Case of the Howrah Foundry Industry**. *Book Chapter in Industrialisation for Employment and Growth in India, Cambridge University Press, 2021* *[Book Review](https://www.epw.in/journal/2022/26-27/book-reviews/quest-indian-manufacturing-future.html)* <br/><small>[Book Chapter](https://www.cambridge.org/core/books/industrialisation-for-employment-and-growth-in-india/C038DB4557F1361E61C47276BAB2DBB7)</small><br>
 
