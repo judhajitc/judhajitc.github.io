@@ -41,7 +41,7 @@ turnout, and confidence or trust in political institutions.
 
 ## Pre-Ph.D. Peer-Reviewed Publications
 
-**Continued Misery or a Change in Fortune? The Case of the Howrah Foundry Industry**. *Book Chapter in Industrialisation for Employment and Growth in India, Cambridge University Press, 2021* *[Book Review](https://www.epw.in/journal/2022/26-27/book-reviews/quest-indian-manufacturing-future.html)* <br/><small>[Book Chapter](https://www.cambridge.org/core/books/industrialisation-for-employment-and-growth-in-india/C038DB4557F1361E61C47276BAB2DBB7)</small><br>
+**Continued Misery or a Change in Fortune? The Case of the Howrah Foundry Industry**. *Book Chapter in Industrialisation for Employment and Growth in India, Cambridge University Press, 2021* <br/><small>[Book Chapter](https://www.cambridge.org/core/books/industrialisation-for-employment-and-growth-in-india/C038DB4557F1361E61C47276BAB2DBB7)</small><br>
 
 **Has India Deindustrialised *Prematurely*? A Disaggregated Analysis**.(with R. Nagaraj) *Economic and Political Weekly, 2020.* *Media Coverage: [mint](https://www.livemint.com/news/india/india-hasn-t-deindustrialized-but-stagnated-11609985184017.html)*, *[Scroll.in](https://scroll.in/article/992066/despite-the-make-in-india-push-the-share-of-manufacturing-sector-in-the-gdp-has-stayed-stagnant)* <br/><small>[Paper](https://judhajitc.github.io/files/HasIndiaDeindustrialisedPrematurelyEPW.pdf)</small><br>
 
