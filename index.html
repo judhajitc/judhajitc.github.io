@@ -22,6 +22,7 @@ permalink: /
     img{max-width:100%;height:auto;border-radius:8px}
     .wrap{max-width:1024px;margin:24px auto;padding:0 16px}
 
+    /* Header */
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
     .hero h1{font-size:2rem;margin:0 0 .5rem 0}
     .meta{display:flex;gap:12px;align-items:center;margin:.25rem 0 .75rem}
@@ -33,49 +34,54 @@ permalink: /
     hr{border:0;border-top:1px solid var(--line);margin:22px 0}
     h2{font-size:1.35rem;margin:0 0 .5rem 0}
 
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(260px,1fr));gap:14px}
-    @media (max-width: 880px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} }
-    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:var(--shadow)}
-    .card h3{margin:.15rem 0 .35rem 0;font-size:1.05rem;line-height:1.35}
-    .subtle{color:var(--muted);font-size:.95rem;margin:.2rem 0}
-    .links a{margin-right:.5rem}
+    /* ---------- Working Papers: vertical list of horizontal rows ---------- */
+    .papers { display: flex; flex-direction: column; gap: 26px; }
 
-    /* Paper thumbnail layout */
-    .paper-row{ display:grid; grid-template-columns:120px 1fr; gap:12px; align-items:start; }
+    .paper-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;     /* thumbnail | text */
+      gap: 16px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
     .paper-row .thumb{
-      width:120px; height:90px; object-fit:cover; border-radius:8px;
-      border:1px solid var(--line); background:#fff;
+      width: 200px;
+      height: 150px;                        /* 4:3 ratio */
+      object-fit: cover;
+      border-radius: 8px;
+      border:1px solid var(--line);
+      background:#fff;
     }
     .paper-row .paper-body{ min-width:0; }
-    @media (max-width:600px){
-      .paper-row{ grid-template-columns:84px 1fr; }
-      .paper-row .thumb{ width:84px; height:64px; }
-    }
+    .paper-row .paper-body h3{ margin-top:2px; font-size:1.15rem; line-height:1.35; }
+    .paper-row .subtle{ color:var(--muted); margin-top:.25rem; }
+    .paper-row .actions{ margin-top:.5rem; }
+    .paper-row .links a{ margin-right:.75rem; }
 
-    /* NEW: Read Abstract button/link */
+    /* Read Abstract button */
     .abstract-btn{
       display:inline-block;
-      padding:.2rem .45rem;
-      border-radius:6px;
+      padding:.28rem .55rem;
+      border-radius:8px;
       border:1px solid var(--line);
       background:#efefef;
       font-weight:600;
-      text-decoration:none;
       color:#222;
-      margin:.25rem 0 .35rem 0;
     }
     .abstract-btn:hover{ background:#e7e7e7; text-decoration:none; }
 
-    /* Optional inline-abstract style (if you use <details>) */
-    details.abstract-inline{margin:.35rem 0}
-    details.abstract-inline > summary{
-      list-style:none; cursor:pointer; display:inline-block;
-      padding:.2rem .45rem; border-radius:6px; border:1px solid var(--line);
-      background:#efefef; font-weight:600;
+    /* Mobile */
+    @media (max-width:880px){ .hero{grid-template-columns:1fr} }
+    @media (max-width:700px){
+      .paper-row{ grid-template-columns: 130px 1fr; }
+      .paper-row .thumb{ width:130px; height:98px; }
     }
-    details.abstract-inline[open] > summary{ background:#e7e7e7 }
-    details.abstract-inline > div{margin:.4rem 0 0}
-    
+
+    /* Teaching details */
     details{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff}
     summary{cursor:pointer;font-weight:600}
     .section{margin:18px 0 26px}
@@ -97,15 +103,15 @@ permalink: /
 
         <p class="blurb">
           I am an applied microeconomist with a focus on research topics at the intersection of Environmental and Development Economics.
-          I am currently a Postdoctoral Fellow in Agricultural and Resource Economics at Colorado State University. I study the short to medium run labor market and economic impacts of flooding in the US. This research is funded through the National Oceanic and Atmospheric Administratio-National Weather Service.
+          I am currently a Postdoctoral Fellow in Agricultural and Resource Economics at Colorado State University. I study the short- to medium-run labor market and economic impacts of flooding in the US. This research is funded through the National Oceanic and Atmospheric Administration – National Weather Service.
         </p>
 
         <p class="blurb">
-          I received my PhD from Michigan State University in 2024. My dissertation chapters examined how covariate shocks can shape perceptions of relative deprivation through channels of both economic losses and misperceptions about others economic status; other chapters studied how frost shocks in Peru
-          impacts intimate partner violence, and political trust.
+          I received my PhD from Michigan State University in 2024. My dissertation chapters examine how covariate shocks shape perceptions of relative deprivation through both economic losses and misperceptions; other chapters study how frost shocks in Peru affect intimate partner violence and political trust.
         </p>
 
-        <p><a class="pill" href="{{ 'https://judhajitc.github.io/files/Judhajit Chakraborty CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download CV</a></p>
+        <!-- encode spaces in filename -->
+        <p><a class="pill" href="https://judhajitc.github.io/files/Judhajit%20Chakraborty%20CV.pdf" target="_blank" rel="noopener">Download CV</a></p>
 
         <div class="section">
           <strong>Upcoming presentations:</strong>
@@ -117,7 +123,7 @@ permalink: /
       </div>
 
       <div>
-        <img src="{{ 'https://judhajitc.github.io/files/profilepic.JPG' | relative_url }}" alt="Portrait of Judhajit Chakraborty" />
+        <img src="https://judhajitc.github.io/files/profilepic.JPG" alt="Portrait of Judhajit Chakraborty" />
       </div>
     </header>
 
@@ -128,68 +134,66 @@ permalink: /
       <h2>Research</h2>
 
       <h3 style="margin:.25rem 0 .25rem">Working Papers</h3>
-      <div class="grid">
+
+      <div class="papers">
+
         <!-- Paper 1 -->
-        <article class="card paper-row">
-          <a href="{{ 'https://judhajitc.github.io/files/Covariate Shocks and Perceived Relative Deprivation.pdf' | relative_url }}">
-            <img class="thumb" src="{{ 'https://judhajitc.github.io/files/PRDThumbnail.PNG' | relative_url }}"
-                 alt="PRD Thumbnail">
+        <article class="paper-row">
+          <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">
+            <img class="thumb" src="https://judhajitc.github.io/files/PRDThumbnail.PNG" alt="PRD thumbnail">
           </a>
           <div class="paper-body">
-            <h3><a href="{{ 'https://judhajitc.github.io/files/Covariate Shocks and Perceived Relative Deprivation.pdf' | relative_url }}">
-             Can Covariate Shocks Affect Perceived Relative Deprivation? Evidence using Excess Rainfall Shocks in Peru
-            </a></h3>
+            <h3>
+              <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">
+                Can Covariate Shocks Affect Perceived Relative Deprivation? Evidence using Excess Rainfall Shocks in Peru
+              </a>
+            </h3>
             <div class="subtle">Judhajit Chakraborty (2025) — Working paper</div>
 
-            <!-- Link style 'Read Abstract' -->
-            <p><a class="abstract-btn" href="{{ 'https://judhajitc.github.io/files/Covariate Shocks and Perceived Relative Deprivation.pdf' | relative_url }}" target="_blank" rel="noopener">Read Abstract</a></p>
-
-            <!-- OR use inline (uncomment and provide text) -->
-            <details class="abstract-inline">
-              <summary>Read Abstract</summary>
-              <div>
-                <p>Perceptions of relative deprivation affect a range of economic and behavioral outcomes, such as support for redistribution, political attitudes, and risky behavior. There is scarce evidence regarding how *covariate shocks* that affect entire communities shape such perceptions. Using nationally representative panel data from Peru, and exploiting within-household variation in exposure to  excess rainfall shocks (a covariate shock), I examine how such shocks shape households’ perceptions of standard of living relative to others in their locality – a measure of perceived relative deprivation. I find that excess rainfall shocks increase households’ perception of relative deprivation on average, as well as across both poor and non-poor households. The increase in perceived relative deprivation among poor households can be partially explained by the disproportionate economic losses that they experience following these shocks. However, this is not true for non-poor households who suffer no significant economic losses. Finally, households also systematically misperceive and underestimate neighbors' welfare losses. This is a more salient explanation for the increased perceived relative deprivation among non-poor households following a shock. Suggestive evidence indicates participation in local neighborhood associations, which provide access to heterogeneous networks, can weaken such misperceptions. Additionally, access to social protection programs, such as conditional cash transfers and in-kind food assistance, attenuates the effect of these shocks on perceived relative deprivation. The paper informs our understanding of why demand for redistribution may remain muted during episodes of rising inequality and poverty, and reveal the potential limitations of community-based poverty targeting methods during crisis periods.</p>
-              </div>
-            </details>
-           
+            <div class="actions">
+              <!-- If you have a separate abstract PDF/HTML, point to that instead -->
+              <a class="abstract-btn" href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf#page=1" target="_blank" rel="noopener">Read Abstract</a>
+            </div>
 
             <p class="links">
-              <a href="{{ 'https://judhajitc.github.io/files/Covariate Shocks and Perceived Relative Deprivation.pdf' | relative_url }}">PDF</a>
-             <!-- <a href="{{ '/files/flood_us_counties_slides.pdf' | relative_url }}">Slides</a> -->
-              <!-- <a href="https://github.com/judhajitc/flood_econ" target="_blank" rel="noopener">Code</a> -->
+              <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">PDF</a>
             </p>
           </div>
         </article>
 
         <!-- Paper 2 -->
-        <article class="card paper-row">
-          <a href="{{ 'https://judhajitc.github.io/files/Frosts_and_IPV.pdf' | relative_url }}">
-            <img class="thumb" src="{{ 'https://judhajitc.github.io/files/IPVThumbnail.PNG' | relative_url }}"
-                 alt="IPV Thumbnail">
+        <article class="paper-row">
+          <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">
+            <img class="thumb" src="https://judhajitc.github.io/files/IPVThumbnail.PNG" alt="IPV thumbnail">
           </a>
           <div class="paper-body">
-            <h3><a href="{{ 'https://judhajitc.github.io/files/Frosts_and_IPV.pdf' | relative_url }}">
-              Frosty Climate, Icy Relationships: Frosts and Intimate Partner Violence in Rural Peru
-            </a></h3>
-            <div class="subtle">with Katie Bollman, Leah Lakdawala and Eduardo Nakasone) *Revise & Resubmit, <ins>Journal of Development Economics</ins>* (2023) — Working paper</div>
+            <h3>
+              <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">
+                Frosty Climate, Icy Relationships: Frosts and Intimate Partner Violence in Rural Peru
+              </a>
+            </h3>
+            <div class="subtle">
+              with Katie Bollman, Leah Lakdawala, and Eduardo Nakasone — <em>Revise &amp; Resubmit, Journal of Development Economics</em> (2023) — Working paper
+            </div>
 
-            <p><a class="abstract-btn" href="{{ 'https://judhajitc.github.io/files/Frosts_and_IPV.pdf' | relative_url }}" target="_blank" rel="noopener">Read Abstract</a></p>
+            <div class="actions">
+              <a class="abstract-btn" href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf#page=1" target="_blank" rel="noopener">Read Abstract</a>
+            </div>
 
             <p class="links">
-              <a href="{{ 'https://judhajitc.github.io/files/Frosts_and_IPV.pdf' | relative_url }}">PDF</a>
-             <!--  <a href="{{ '/files/peru_misperceptions_slides.pdf' | relative_url }}">Slides</a>-->
-               <!--  <a href="https://github.com/judhajitc/peru_rel_dep" target="_blank" rel="noopener">Code</a>-->
+              <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">PDF</a>
             </p>
           </div>
         </article>
 
+      </div> <!-- /.papers -->
 
       <div class="section">
         <h3 style="margin:.75rem 0 .35rem">Work in Progress</h3>
         <ul class="list-compact">
           <li>Paper-1 (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham, Diellza Muriqi)</li>
-          <li>Paper-2 (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham) </li>
-          <li>Digitization Project- India</li>
+          <li>Paper-2 (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham)</li>
+          <li>Digitization Project — India</li>
         </ul>
       </div>
     </section>
@@ -223,16 +227,11 @@ permalink: /
     <section class="section" id="contact">
       <h2>Contact</h2>
       <p>
-        Colorado State University · Department of Agricultural & Resource Economics<br/>
+        Colorado State University · Department of Agricultural &amp; Resource Economics<br/>
         <a href="mailto:judhajit.chakraborty@colostate.edu">judhajit.chakraborty@colostate.edu</a>
-      </p>
-      <p class="note">
-        Place abstract files in <code>/files/</code> (e.g., <code>*_abstract.pdf</code>).
-        For inline abstracts, use the commented <code>&lt;details class=\"abstract-inline\"&gt;</code> block.
       </p>
     </section>
 
   </main>
 </body>
 </html>
-
