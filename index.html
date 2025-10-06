@@ -1,1 +1,284 @@
+---
+layout: null
+title: "Judhajit Chakraborty"
+permalink: /
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Judhajit Chakraborty</title>
+  <style>
+    :root{
+      --bg:#fff; --fg:#111; --muted:#444; --line:#e9e9e9; --link:#5b34ff;
+      --card:#fafafa; --shadow:0 1px 2px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;height:auto;border-radius:8px}
+    .wrap{max-width:1024px;margin:24px auto;padding:0 16px}
+
+    /* Header */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+    .hero h1{font-size:2rem;margin:0 0 .5rem 0}
+    .meta{display:flex;gap:12px;align-items:center;margin:.25rem 0 .75rem}
+    .meta a{display:inline-flex;gap:6px;align-items:center}
+    .pill{display:inline-block;margin-top:8px;padding:.35rem .6rem;border:1px solid var(--line);border-radius:8px;background:#fff;font-weight:600}
+    .blurb{margin:12px 0 10px;color:var(--muted)}
+    .list-compact{margin:.35rem 0 0 .9rem;padding:0}
+    .list-compact li{margin:.15rem 0}
+    hr{border:0;border-top:1px solid var(--line);margin:22px 0}
+    h2{font-size:1.35rem;margin:0 0 .5rem 0}
+
+    /* ---------- Working Papers: vertical list of horizontal rows ---------- */
+    .papers { display: flex; flex-direction: column; gap: 26px; }
+
+    .paper-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;     /* thumbnail | text */
+      gap: 16px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+    .paper-row .thumb{
+      width: 200px;
+      height: 150px;                        /* 4:3 ratio */
+      object-fit: cover;
+      border-radius: 8px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .paper-row .paper-body{ min-width:0; }
+    .paper-row .paper-body h3{ margin-top:2px; font-size:1.15rem; line-height:1.35; }
+    .paper-row .subtle{ color:var(--muted); margin-top:.25rem; }
+    .paper-row .links a{ margin-right:.75rem; }
+
+    /* Inline abstract */
+    details.abstract-inline{margin:.55rem 0 0}
+    details.abstract-inline > summary{
+      list-style:none; cursor:pointer; display:inline-block;
+      padding:.28rem .55rem; border-radius:8px; border:1px solid var(--line);
+      background:#efefef; font-weight:600; color:#222;
+    }
+    details.abstract-inline[open] > summary{ background:#e7e7e7 }
+    details.abstract-inline > div{margin:.5rem 0 0}
+
+    /* Mobile */
+    @media (max-width:880px){ .hero{grid-template-columns:1fr} }
+    @media (max-width:700px){
+      .paper-row{ grid-template-columns: 130px 1fr; }
+      .paper-row .thumb{ width:130px; height:98px; }
+    }
+
+    /* Teaching details */
+    details.block{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff}
+    summary{cursor:pointer;font-weight:600}
+    .section{margin:18px 0 26px}
+    .note{color:#777;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div>
+        <h1>Judhajit Chakraborty</h1>
+        <div class="meta">
+          <a href="mailto:judhajit.chakraborty@colostate.edu">📧 judhajit.chakraborty@colostate.edu</a>
+          <!-- <a href="https://twitter.com/judhajitc" target="_blank" rel="noopener">𝕏 @judhajitc</a> -->
+          <a href="https://github.com/judhajitc" target="_blank" rel="noopener">GH @judhajitc</a>
+        </div>
+
+        <p class="blurb">
+          I am an applied microeconomist with a focus on research topics at the intersection of Environmental and Development Economics.
+          I am currently a Postdoctoral Fellow in Agricultural and Resource Economics at Colorado State University. I study the short- to medium-run labor market and economic impacts of flooding in the US. This research is funded through the National Oceanic and Atmospheric Administration – National Weather Service.
+        </p>
+
+        <p class="blurb">
+          I received my PhD from Michigan State University in 2024. My dissertation chapters examine how covariate shocks shape perceptions of relative deprivation through both economic losses and misperceptions; other chapters study how frost shocks in Peru affect intimate partner violence and political trust.
+        </p>
+
+        <p><a class="pill" href="https://judhajitc.github.io/files/Judhajit%20Chakraborty%20CV.pdf" target="_blank" rel="noopener">Download CV</a></p>
+
+        <div class="section">
+          <strong>Upcoming presentations:</strong>
+          <ul class="list-compact">
+            <li>AAEA Annual Meeting, 2025 (Denver)</li>
+            <li>AERE Sessions, 2025</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://judhajitc.github.io/files/profilepic.JPG" alt="Portrait of Judhajit Chakraborty" />
+      </div>
+    </header>
+
+    <hr/>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <h2>Research</h2>
+
+      <h3 style="margin:.25rem 0 .25rem">Working Papers</h3>
+
+      <div class="papers">
+
+        <!-- Paper 1 -->
+        <article class="paper-row">
+          <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">
+            <img class="thumb" src="https://judhajitc.github.io/files/PRDThumbnail.PNG" alt="PRD thumbnail">
+          </a>
+          <div class="paper-body">
+            <h3>
+              <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">
+                Can Covariate Shocks Affect Perceived Relative Deprivation? Evidence using Excess Rainfall Shocks in Peru
+              </a>
+            </h3> 
+            <div class="subtle">Judhajit Chakraborty</div>
+            <div class="micro">
+  <a href="https://www.econthatmatters.com/2023/12/downpours-of-deprivation-exploring-the-impact-of-excess-rainfall-shocks-on-perceived-relative-deprivation-in-peru/" target="_blank" rel="noopener">
+    Blog: Economics That Really Matters
+  </a>
+  <span class="sep">·</span>
+  <strong>Presented at:</strong>
+  2024 DARE Seminar (CSU); 2024 SEEDS (Georgia Tech); Midwest Intl. Dev. (UChicago);
+  Seminario MAP, Peru (Online); PacDev 2024 (Stanford King Center); AAEA 2023; Dev Lunch 2023 (MSU)
+  <span class="sep">·</span>
+</div>
+
+            <!-- Inline abstract (keeps layout tight and avoids duplicate buttons) -->
+            <details class="abstract-inline">
+              <summary>Read Abstract</summary>
+              <div>
+                <p>Perceptions of relative deprivation affect a range of economic and behavioral outcomes, such
+as support for redistribution, political attitudes, and risky behavior. There is scarce evidence
+regarding how covariate shocks that affect entire communities shape such perceptions. Using
+nationally representative panel data from Peru, and exploiting within-household variation
+in exposure to excess rainfall shocks (a covariate shock), I examine how such shocks shape
+households’ perceptions of standard of living relative to others in their locality – a measure of
+perceived relative deprivation. I find that excess rainfall shocks increase households’ perception
+of relative deprivation on average, as well as across both poor and non-poor households. The
+increase in perceived relative deprivation among poor households can be partially explained by
+the disproportionate economic losses that they experience following these shocks. However,
+this is not true for non-poor households who suffer no significant economic losses. Finally,
+households also systematically misperceive and underestimate neighbors’ welfare losses. This
+is a more salient explanation for the increased perceived relative deprivation among non-poor
+households following a shock. Suggestive evidence indicates participation in local neighborhood
+associations, which provide access to heterogeneous networks, can weaken such misperceptions.
+Additionally, access to social protection programs, such as conditional cash transfers and in-kind
+food assistance, attenuates the effect of these shocks on perceived relative deprivation. The
+paper informs our understanding of why demand for redistribution may remain muted during
+episodes of rising inequality and poverty, and reveal the potential limitations of communitybased poverty targeting methods during crisis periods.</p>
+              </div>
+            </details>
+
+            <!--<p class="links">
+              <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">PDF</a>
+            </p>  -->
+          </div>
+        </article>
+
+        <!-- Paper 2 -->
+        <article class="paper-row">
+          <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">
+            <img class="thumb" src="https://judhajitc.github.io/files/IPVThumbnail.PNG" alt="IPV thumbnail">
+          </a>
+          <div class="paper-body">
+            <h3>
+              <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">
+                Frosty Climate, Icy Relationships: Frosts and Intimate Partner Violence in Rural Peru
+              </a>
+            </h3>
+            <div class="subtle">
+              with Katie Bollman, Leah Lakdawala, and Eduardo Nakasone — <em>Revise &amp; Resubmit, Journal of Development Economics</em>
+            </div>
+
+            <details class="abstract-inline">
+              <summary>Read Abstract</summary>
+              <div>
+                <p>Violence against women — in particular, Intimate Partner Violence (IPV) — is a health
+concern for women across the world. We study the effect of cold exposure on IPV among
+Peruvian women. Using a dataset that matches women to weather exposure, we find that
+cold shocks increase IPV: 10 degree hours below -9°C increases the probability of experiencing
+domestic violence by 0.5 percentage points. These effects are larger for more extreme temperature
+thresholds. We then provide evidence that cold influences IPV through two main channels. First,
+extreme cold reduces income. Second, extreme cold limits time spent outside of the household,
+potentially increasing exposure of women to violent partners. To our knowledge, we are the
+first to measure relative significance of these two channels by using variation in cold timing
+to distinguish shocks that affect IPV through changes in income from those that act through
+time spent indoors. We find that the effect of cold on IPV is mostly driven by low temperatures
+that occur during the agricultural growing season, when income is most affected; 10 degree
+hours below -9°C during the growing season increases the probability of experiencing IPV by
+1.6 percentage points. In contrast, we find that cold exposure outside of the growing season has
+no statistically significant effect on IPV.
+</p>
+              </div>
+            </details>
+
+            <!--<p class="links">
+              <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">PDF</a>
+            </p> -->
+          </div>
+        </article>
+
+      </div> <!-- /.papers -->
+
+      <div class="section">
+        <h3 style="margin:.75rem 0 .35rem">Work in Progress</h3>
+        <ul class="list-compact">
+          <li>Paper-1 (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham, Diellza Muriqi)</li>
+          <li>Paper-2 (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham)</li>
+          <li>Digitization Project — India</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr/>
+
+    <!-- TEACHING -->
+    <section class="section" id="teaching">
+      <h2>Teaching</h2>
+      <ul class="list-compact">
+        <li>Course-1</li>
+        <li>Course-2</li>
+        <li>Course-3</li>
+      </ul>
+
+      <div class="section">
+        <details class="block">
+          <summary>Show student feedback</summary>
+          <ul class="list-compact" style="margin-top:.5rem">
+            <li>“Clear explanations and patient guidance; always available for help.”</li>
+            <li>“Challenging but fair; provided excellent real-world examples.”</li>
+            <li>“Encouraged discussion and critical thinking beyond the syllabus.”</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <hr/>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>
+        Colorado State University · Department of Agricultural &amp; Resource Economics<br/>
+        <a href="mailto:judhajit.chakraborty@colostate.edu">judhajit.chakraborty@colostate.edu</a>
+      </p>
+    </section>
+
+  </main>
+</body>
+</html>
+
 
