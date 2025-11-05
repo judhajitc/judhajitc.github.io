@@ -38,14 +38,13 @@ permalink: /
     .papers{display:flex;flex-direction:column;gap:26px}
     .paper-row{
       display:grid;
-      grid-template-columns:180px 1fr; /* thumbnail | text */
-      gap:16px;
-      align-items:start;
-      border:none;background:transparent;box-shadow:none;padding:0;border-radius:0;
+      grid-template-columns:180px 1fr;
+      gap:16px; align-items:start;
+      border:none; background:transparent; box-shadow:none; padding:0; border-radius:0;
     }
     .paper-row .thumb{
-      width:180px;height:135px; /* 4:3 */
-      object-fit:cover;border:1px solid var(--line);background:#fff;border-radius:8px;
+      width:180px; height:135px; /* 4:3 */
+      object-fit:cover; border:1px solid var(--line); background:#fff; border-radius:8px;
       cursor:zoom-in;
     }
     .paper-row .paper-body{min-width:0}
@@ -55,23 +54,28 @@ permalink: /
     /* Inline abstract */
     details.abstract-inline{margin:.55rem 0 0}
     details.abstract-inline > summary{
-      list-style:none;cursor:pointer;display:inline-block;
-      padding:.28rem .55rem;border-radius:8px;border:1px solid var(--line);
-      background:#efefef;font-weight:600;color:#222;
+      list-style:none; cursor:pointer; display:inline-block;
+      padding:.28rem .55rem; border-radius:8px; border:1px solid var(--line);
+      background:#efefef; font-weight:600; color:#222;
     }
     details.abstract-inline[open] > summary{background:#e7e7e7}
     details.abstract-inline > div{margin:.5rem 0 0}
 
-    /* Lightbox */
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:9999}
+    /* Lightbox (shared by all thumbnails) */
+    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.72);
+      display:none; align-items:center; justify-content:center; z-index:9999}
     .lightbox.show{display:flex}
-    .lightbox img{max-width:90vw;max-height:90vh;border-radius:10px;box-shadow:0 12px 36px rgba(0,0,0,.45)}
+    .lightbox img{max-width:90vw; max-height:90vh; border-radius:10px; box-shadow:0 12px 36px rgba(0,0,0,.45)}
 
-    /* Mobile */
-    @media (max-width:880px){ .hero{grid-template-columns:1fr} }
+    /* Pre-Ph.D. thumbnails */
+    .thumb-pre{
+      width:140px; float:left; margin-right:12px; margin-bottom:6px;
+      border-radius:6px; border:1px solid var(--line); cursor:zoom-in;
+    }
     @media (max-width:700px){
       .paper-row{grid-template-columns:120px 1fr}
       .paper-row .thumb{width:120px;height:90px}
+      .thumb-pre{width:110px}
     }
   </style>
 </head>
@@ -125,14 +129,12 @@ permalink: /
 
         <!-- Paper 1 -->
         <article class="paper-row">
-          <!-- Thumbnail opens lightbox (not the PDF) -->
           <img class="thumb"
                src="https://judhajitc.github.io/files/PRDThumbnail.PNG"
                data-large="https://judhajitc.github.io/files/PRDThumbnail.PNG"
                alt="PRD thumbnail">
           <div class="paper-body">
             <h3>
-              <!-- Title still links to PDF -->
               <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">
                 Can Covariate Shocks Affect Perceived Relative Deprivation? Evidence using Excess Rainfall Shocks in Peru
               </a>
@@ -263,13 +265,15 @@ We match granular data on cold weather shocks to individuals using variation in 
       </p>
     </section>
 
-    <!-- PRE-PHD PUBLICATIONS (plain list) -->
+    <!-- PRE-PHD PUBLICATIONS -->
     <section class="section" id="prephd">
       <h2>Pre-Ph.D. Peer-Reviewed Publications</h2>
 
       <div class="section" style="margin-top:1rem">
 
         <p>
+          <!-- If you have a Foundry thumbnail, uncomment and set data-large -->
+          <!-- <img class="thumb-pre" src="https://judhajitc.github.io/files/FoundryThumbnail.PNG" data-large="https://judhajitc.github.io/files/FoundryThumbnail.PNG" alt="Foundry Thumbnail"> -->
           <strong>
             <a href="https://www.cambridge.org/core/books/industrialisation-for-employment-and-growth-in-india/C038DB4557F1361E61C47276BAB2DBB7" target="_blank" rel="noopener">
               Continued Misery or a Change in Fortune? The Case of the Howrah Foundry Industry
@@ -278,8 +282,13 @@ We match granular data on cold weather shocks to individuals using variation in 
           <em>Book Chapter in <strong>Industrialisation for Employment and Growth in India</strong>, Cambridge University Press (2021)</em>
         </p>
 
+        <div style="clear:both; height:1.2rem"></div>
+
         <p>
-          <img src="https://judhajitc.github.io/files/DeindustrializationThumbnail.PNG" alt="Deindustrialisation Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
+          <img class="thumb-pre"
+               src="https://judhajitc.github.io/files/DeindustrializationThumbnail.PNG"
+               data-large="https://judhajitc.github.io/files/DeindustrializationThumbnail.PNG"
+               alt="Deindustrialisation Thumbnail">
           <strong>
             <a href="https://judhajitc.github.io/files/HasIndiaDeindustrialisedPrematurelyEPW.pdf" target="_blank" rel="noopener">
               Has India Deindustrialised <em>Prematurely</em>? A Disaggregated Analysis
@@ -292,10 +301,14 @@ We match granular data on cold weather shocks to individuals using variation in 
             <a href="https://scroll.in/article/992066/despite-the-make-in-india-push-the-share-of-manufacturing-sector-in-the-gdp-has-stayed-stagnant" target="_blank" rel="noopener">Scroll.in</a>
           </small>
         </p>
+
         <div style="clear:both; height:1.2rem"></div>
 
         <p>
-          <img src="https://judhajitc.github.io/files/LandThumbnail.PNG" alt="Land as Collateral Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
+          <img class="thumb-pre"
+               src="https://judhajitc.github.io/files/LandThumbnail.PNG"
+               data-large="https://judhajitc.github.io/files/LandThumbnail.PNG"
+               alt="Land as Collateral Thumbnail">
           <strong>
             <a href="https://judhajitc.github.io/files/LandascollateralinIndia.pdf" target="_blank" rel="noopener">
               Land as Collateral in India
@@ -307,10 +320,14 @@ We match granular data on cold weather shocks to individuals using variation in 
             <a href="https://www.livemint.com/news/india/why-indians-don-t-use-land-as-collateral-11573718470954.html" target="_blank" rel="noopener">Mint</a>
           </small>
         </p>
+
         <div style="clear:both; height:1.2rem"></div>
 
         <p>
-          <img src="https://judhajitc.github.io/files/UrbanThumbnail.PNG" alt="Urbanization Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
+          <img class="thumb-pre"
+               src="https://judhajitc.github.io/files/UrbanThumbnail.PNG"
+               data-large="https://judhajitc.github.io/files/UrbanThumbnail.PNG"
+               alt="Urbanization Thumbnail">
           <strong>
             <a href="https://judhajitc.github.io/files/NO_LII_9_04032017_Judhajit_Chakraborty-EPW.pdf" target="_blank" rel="noopener">
               An Unequal Process of Urbanization
@@ -318,8 +335,8 @@ We match granular data on cold weather shocks to individuals using variation in 
           </strong><br>
           <em>Economic and Political Weekly (2017)</em>
         </p>
-        <div style="clear:both;"></div>
 
+        <div style="clear:both;"></div>
       </div>
     </section>
 
@@ -347,7 +364,8 @@ We match granular data on cold weather shocks to individuals using variation in 
       const lb = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
 
-      document.querySelectorAll('.thumb[data-large]').forEach(t => {
+      // Bind to both working-paper and pre-PhD thumbnails
+      document.querySelectorAll('.thumb[data-large], .thumb-pre[data-large]').forEach(t => {
         t.addEventListener('click', () => {
           img.src = t.dataset.large;
           lb.classList.add('show');
