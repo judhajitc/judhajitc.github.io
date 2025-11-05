@@ -13,7 +13,6 @@ permalink: /
   <style>
     :root{
       --bg:#fff; --fg:#111; --muted:#444; --line:#e9e9e9; --link:#5b34ff;
-      --card:#fafafa; --shadow:0 1px 2px rgba(0,0,0,.06);
     }
     *{box-sizing:border-box}
     html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
@@ -33,56 +32,47 @@ permalink: /
     .list-compact li{margin:.15rem 0}
     hr{border:0;border-top:1px solid var(--line);margin:22px 0}
     h2{font-size:1.35rem;margin:0 0 .5rem 0}
+    .micro{font-size:.82rem;line-height:1.35;color:#666}
 
-    /* ---------- Working Papers: vertical list of horizontal rows ---------- */
-    .papers { display: flex; flex-direction: column; gap: 26px; }
-
-    .paper-row {
-      display: grid;
-      grid-template-columns: 200px 1fr;     /* thumbnail | text */
-      gap: 16px;
-      align-items: start;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 14px;
-      background: #fff;
-      box-shadow: var(--shadow);
+    /* ---------- Working Papers: plain rows (no boxes) ---------- */
+    .papers{display:flex;flex-direction:column;gap:26px}
+    .paper-row{
+      display:grid;
+      grid-template-columns:180px 1fr; /* thumbnail | text */
+      gap:16px;
+      align-items:start;
+      border:none;background:transparent;box-shadow:none;padding:0;border-radius:0;
     }
     .paper-row .thumb{
-      width: 200px;
-      height: 150px;                        /* 4:3 ratio */
-      object-fit: cover;
-      border-radius: 8px;
-      border:1px solid var(--line);
-      background:#fff;
+      width:180px;height:135px; /* 4:3 */
+      object-fit:cover;border:1px solid var(--line);background:#fff;border-radius:8px;
+      cursor:zoom-in;
     }
-    .paper-row .paper-body{ min-width:0; }
-    .paper-row .paper-body h3{ margin-top:2px; font-size:1.15rem; line-height:1.35; }
-    .paper-row .subtle{ color:var(--muted); margin-top:.25rem; }
-    .paper-row .links a{ margin-right:.75rem; }
+    .paper-row .paper-body{min-width:0}
+    .paper-row .paper-body h3{margin-top:2px;font-size:1.15rem;line-height:1.35}
+    .paper-row .subtle{color:var(--muted);margin-top:.25rem}
 
     /* Inline abstract */
     details.abstract-inline{margin:.55rem 0 0}
     details.abstract-inline > summary{
-      list-style:none; cursor:pointer; display:inline-block;
-      padding:.28rem .55rem; border-radius:8px; border:1px solid var(--line);
-      background:#efefef; font-weight:600; color:#222;
+      list-style:none;cursor:pointer;display:inline-block;
+      padding:.28rem .55rem;border-radius:8px;border:1px solid var(--line);
+      background:#efefef;font-weight:600;color:#222;
     }
-    details.abstract-inline[open] > summary{ background:#e7e7e7 }
+    details.abstract-inline[open] > summary{background:#e7e7e7}
     details.abstract-inline > div{margin:.5rem 0 0}
+
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:9999}
+    .lightbox.show{display:flex}
+    .lightbox img{max-width:90vw;max-height:90vh;border-radius:10px;box-shadow:0 12px 36px rgba(0,0,0,.45)}
 
     /* Mobile */
     @media (max-width:880px){ .hero{grid-template-columns:1fr} }
     @media (max-width:700px){
-      .paper-row{ grid-template-columns: 130px 1fr; }
-      .paper-row .thumb{ width:130px; height:98px; }
+      .paper-row{grid-template-columns:120px 1fr}
+      .paper-row .thumb{width:120px;height:90px}
     }
-
-    /* Teaching details */
-    details.block{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff}
-    summary{cursor:pointer;font-weight:600}
-    .section{margin:18px 0 26px}
-    .note{color:#777;font-size:.9rem}
   </style>
 </head>
 <body>
@@ -95,12 +85,11 @@ permalink: /
         <div class="meta">
           <a href="mailto:judhajit.chakraborty@colostate.edu">📧 judhajit.chakraborty@colostate.edu</a>
           <a href="https://scholar.google.com/citations?user=NFVuuIIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-          <!-- <a href="https://twitter.com/judhajitc" target="_blank" rel="noopener">𝕏 @judhajitc</a> -->
           <a href="https://github.com/judhajitc" target="_blank" rel="noopener">GH @judhajitc</a>
         </div>
 
         <p class="blurb">
-          I am an applied microeconomist working at the intersection of Behavioral, Environmental and Development Economics. My research examines the socio-economic and distributional impacts of natural hazards, with a strong focus on building and contributing with big, novel datasets that combine geo-spatial, administrative, and digitized sources.          
+          I am an applied microeconomist working at the intersection of Behavioral, Environmental and Development Economics. My research examines the socio-economic and distributional impacts of natural hazards, with a strong focus on building and contributing with big, novel datasets that combine geo-spatial, administrative, and digitized sources.
           I am currently a Postdoctoral Fellow in Agricultural and Resource Economics at Colorado State University. I study the short- to medium-run labor market and economic impacts of flash floods and floods in the US. This research is funded through the National Oceanic and Atmospheric Administration – National Weather Service.
         </p>
 
@@ -136,28 +125,26 @@ permalink: /
 
         <!-- Paper 1 -->
         <article class="paper-row">
-          <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">
-            <img class="thumb" src="https://judhajitc.github.io/files/PRDThumbnail.PNG" alt="PRD thumbnail">
-          </a>
+          <!-- Thumbnail opens lightbox (not the PDF) -->
+          <img class="thumb"
+               src="https://judhajitc.github.io/files/PRDThumbnail.PNG"
+               data-large="https://judhajitc.github.io/files/PRDThumbnail.PNG"
+               alt="PRD thumbnail">
           <div class="paper-body">
             <h3>
+              <!-- Title still links to PDF -->
               <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">
                 Can Covariate Shocks Affect Perceived Relative Deprivation? Evidence using Excess Rainfall Shocks in Peru
               </a>
-            </h3> 
+            </h3>
             <div class="subtle">Judhajit Chakraborty</div>
             <div class="micro">
-  <a href="https://www.econthatmatters.com/2023/12/downpours-of-deprivation-exploring-the-impact-of-excess-rainfall-shocks-on-perceived-relative-deprivation-in-peru/" target="_blank" rel="noopener">
-    Blog: Economics That Really Matters
-  </a>
-  <span class="sep">·</span>
-  <strong>Presented at:</strong>
-  2024 DARE Seminar (CSU); 2024 SEEDS (Georgia Tech); Midwest Intl. Dev. (UChicago);
-  Seminario MAP, Peru (Online); PacDev 2024 (Stanford King Center); AAEA 2023; Dev Lunch 2023 (MSU)
-  <span class="sep">·</span>
-</div>
+              <a href="https://www.econthatmatters.com/2023/12/downpours-of-deprivation-exploring-the-impact-of-excess-rainfall-shocks-on-perceived-relative-deprivation-in-peru/" target="_blank" rel="noopener">
+                Blog: Economics That Really Matters
+              </a>
+              · <strong>Presented at:</strong> 2024 DARE Seminar (CSU); 2024 SEEDS (Georgia Tech); Midwest Intl. Dev. (UChicago); Seminario MAP, Peru (Online); PacDev 2024 (Stanford King Center); AAEA 2023; Dev Lunch 2023 (MSU)
+            </div>
 
-            <!-- Inline abstract (keeps layout tight and avoids duplicate buttons) -->
             <details class="abstract-inline">
               <summary>Read Abstract</summary>
               <div>
@@ -182,18 +169,15 @@ paper informs our understanding of why demand for redistribution may remain mute
 episodes of rising inequality and poverty, and reveal the potential limitations of communitybased poverty targeting methods during crisis periods.</p>
               </div>
             </details>
-
-            <!--<p class="links">
-              <a href="https://judhajitc.github.io/files/Covariate%20Shocks%20and%20Perceived%20Relative%20Deprivation.pdf" target="_blank" rel="noopener">PDF</a>
-            </p>  -->
           </div>
         </article>
 
         <!-- Paper 2 -->
         <article class="paper-row">
-          <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">
-            <img class="thumb" src="https://judhajitc.github.io/files/IPVThumbnail.PNG" alt="IPV thumbnail">
-          </a>
+          <img class="thumb"
+               src="https://judhajitc.github.io/files/IPVThumbnail.PNG"
+               data-large="https://judhajitc.github.io/files/IPVThumbnail.PNG"
+               alt="IPV thumbnail">
           <div class="paper-body">
             <h3>
               <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">
@@ -221,57 +205,44 @@ time spent indoors. We find that the effect of cold on IPV is mostly driven by l
 that occur during the agricultural growing season, when income is most affected; 10 degree
 hours below -9°C during the growing season increases the probability of experiencing IPV by
 1.6 percentage points. In contrast, we find that cold exposure outside of the growing season has
-no statistically significant effect on IPV.
-</p>
+no statistically significant effect on IPV.</p>
               </div>
             </details>
-
-            <!--<p class="links">
-              <a href="https://judhajitc.github.io/files/Frosts_and_IPV.pdf" target="_blank" rel="noopener">PDF</a>
-            </p> -->
           </div>
         </article>
 
-
         <!-- Paper 3 -->
         <article class="paper-row">
-          <a href="https://judhajitc.github.io/files/FrostAndDemocracy.pdf" target="_blank" rel="noopener">
-            <img class="thumb" src="https://judhajitc.github.io/files/DemocracyThumbnail.PNG" alt="Democracy thumbnail">
-          </a>
+          <img class="thumb"
+               src="https://judhajitc.github.io/files/DemocracyThumbnail.PNG"
+               data-large="https://judhajitc.github.io/files/DemocracyThumbnail.PNG"
+               alt="Democracy thumbnail">
           <div class="paper-body">
             <h3>
               <a href="https://judhajitc.github.io/files/FrostAndDemocracy.pdf" target="_blank" rel="noopener">
                 When the Temperature Drops, Perceptions Worsen: Effects of Extreme Cold on Perceptions of Government and Civic Participation in the Peruvian Highlands
               </a>
             </h3>
-            <div class="subtle">
-              with Eduardo Nakasone and Leah Lakdawala
-            </div>
+            <div class="subtle">with Eduardo Nakasone and Leah Lakdawala</div>
 
             <details class="abstract-inline">
               <summary>Read Abstract</summary>
               <div>
-                <p>We examine how extreme weather affects individuals' perceptions of government and political institutions in Peru. 
-We match granular data on cold weather shocks to individuals using variation in interview date and location and find that extreme cold worsens perceptions of democracy. Further, extreme cold reduces civic engagement in formal democratic institutions (participation in national elections) but increases participation in local neighborhood associations. We provide evidence that these effects work through several mechanisms: economic losses, increased incidence of illness, and higher crimes. Finally, we find that greater coverage of government-provided goods and services can attenuate the adverse effects of extreme cold. 
-</p>
+                <p>We examine how extreme weather affects individuals' perceptions of government and political institutions in Peru.
+We match granular data on cold weather shocks to individuals using variation in interview date and location and find that extreme cold worsens perceptions of democracy. Further, extreme cold reduces civic engagement in formal democratic institutions (participation in national elections) but increases participation in local neighborhood associations. We provide evidence that these effects work through several mechanisms: economic losses, increased incidence of illness, and higher crimes. Finally, we find that greater coverage of government-provided goods and services can attenuate the adverse effects of extreme cold.</p>
               </div>
             </details>
-
-            <!--<p class="links">
-              <a href="https://judhajitc.github.io/files/FrostAndDemocracy.pdf" target="_blank" rel="noopener">PDF</a>
-            </p> -->
           </div>
         </article>
-
 
       </div> <!-- /.papers -->
 
       <div class="section">
         <h3 style="margin:.75rem 0 .35rem">Work in Progress</h3>
         <ul class="list-compact">
-          <li>Labor Market Impacts of Flooding in the United States (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham, Diellza Muriqi)</li> <em>Manuscript in Preparation for Submission, Draft coming soon</em>
+          <li>Labor Market Impacts of Flooding in the United States (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham, Diellza Muriqi) — <em>Manuscript in preparation</em></li>
           <li>Flooding and Local Economic Activity: Evidence Using High-Frequency Data on Mobility and Spending for the Contiguous U.S. (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham)</li>
-          <li> Impact of COVID mortality on voting behavior: Evidence from Peru (with Eduardo Nakasone and Leah Lakdawala)</li>
+          <li>Impact of COVID mortality on voting behavior: Evidence from Peru (with Eduardo Nakasone and Leah Lakdawala)</li>
           <li>Who Owns What? Evidence from Digitized Asset Declarations of Public Employees in an Indian State</li>
         </ul>
       </div>
@@ -283,81 +254,75 @@ We match granular data on cold weather shocks to individuals using variation in 
     <section class="section" id="teaching">
       <h2>Teaching</h2>
       <ul class="list-compact">
-    <li>Instructor of Record- AFRE 203: Data Analysis for the Agri-Food System (Spring &amp; Summer 2022)</li>
-    <li>Instructor of Record- AFRE 303: Managerial Economics (Spring &amp; Summer 2023; Summer 2024)</li>
-  </ul>
-
+        <li>Instructor of Record — AFRE 203: Data Analysis for the Agri-Food System (Spring &amp; Summer 2022)</li>
+        <li>Instructor of Record — AFRE 303: Managerial Economics (Spring &amp; Summer 2023; Summer 2024)</li>
+      </ul>
       <p class="micro" style="margin-top:.35rem">
-    Teaching evaluations:
-    <a href="https://judhajitc.github.io/files/Teaching Evaluation.pdf" target="_blank" rel="noopener">All courses</a> ·
-  </p>
+        Teaching evaluations:
+        <a href="https://judhajitc.github.io/files/Teaching%20Evaluation.pdf" target="_blank" rel="noopener">All courses</a>
+      </p>
     </section>
 
+    <!-- PRE-PHD PUBLICATIONS (plain list) -->
     <section class="section" id="prephd">
-  <h2>Pre-Ph.D. Peer-Reviewed Publications</h2>
+      <h2>Pre-Ph.D. Peer-Reviewed Publications</h2>
 
-  <div class="section" style="margin-top:1rem">
+      <div class="section" style="margin-top:1rem">
 
-    <p>
-      <!-- <img src="https://judhajitc.github.io/files/FoundryThumbnail.PNG" alt="Foundry Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;"> -->
-      <strong>
-  <a href="https://www.cambridge.org/core/books/industrialisation-for-employment-and-growth-in-india/C038DB4557F1361E61C47276BAB2DBB7" target="_blank" rel="noopener">
-    Continued Misery or a Change in Fortune? The Case of the Howrah Foundry Industry
-  </a>
-</strong><br>
-<em>Book Chapter in <strong>Industrialisation for Employment and Growth in India</strong>, Cambridge University Press (2021)</em>
-    </p>
+        <p>
+          <strong>
+            <a href="https://www.cambridge.org/core/books/industrialisation-for-employment-and-growth-in-india/C038DB4557F1361E61C47276BAB2DBB7" target="_blank" rel="noopener">
+              Continued Misery or a Change in Fortune? The Case of the Howrah Foundry Industry
+            </a>
+          </strong><br>
+          <em>Book Chapter in <strong>Industrialisation for Employment and Growth in India</strong>, Cambridge University Press (2021)</em>
+        </p>
 
-    <div style="clear:both; height:1.2rem"></div>
+        <p>
+          <img src="https://judhajitc.github.io/files/DeindustrializationThumbnail.PNG" alt="Deindustrialisation Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
+          <strong>
+            <a href="https://judhajitc.github.io/files/HasIndiaDeindustrialisedPrematurelyEPW.pdf" target="_blank" rel="noopener">
+              Has India Deindustrialised <em>Prematurely</em>? A Disaggregated Analysis
+            </a>
+          </strong><br>
+          with R. Nagaraj — <em>Economic and Political Weekly (2020)</em><br>
+          <small>
+            Media coverage:
+            <a href="https://www.livemint.com/news/india/india-hasn-t-deindustrialized-but-stagnated-11609985184017.html" target="_blank" rel="noopener">Mint</a>,
+            <a href="https://scroll.in/article/992066/despite-the-make-in-india-push-the-share-of-manufacturing-sector-in-the-gdp-has-stayed-stagnant" target="_blank" rel="noopener">Scroll.in</a>
+          </small>
+        </p>
+        <div style="clear:both; height:1.2rem"></div>
 
-    <p>
-      <img src="https://judhajitc.github.io/files/DeindustrializationThumbnail.PNG" alt="Deindustrialisation Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
-      <strong>
-  <a href="https://judhajitc.github.io/files/HasIndiaDeindustrialisedPrematurelyEPW.pdf" target="_blank" rel="noopener">
-    Has India Deindustrialised <em>Prematurely</em>? A Disaggregated Analysis
-  </a>
-</strong><br>
-with R. Nagaraj — <em>Economic and Political Weekly (2020)</em><br>
-<small>
-  Media coverage:
-  <a href="https://www.livemint.com/news/india/india-hasn-t-deindustrialized-but-stagnated-11609985184017.html" target="_blank" rel="noopener">Mint</a>,
-  <a href="https://scroll.in/article/992066/despite-the-make-in-india-push-the-share-of-manufacturing-sector-in-the-gdp-has-stayed-stagnant" target="_blank" rel="noopener">Scroll.in</a>
-</small>
-    </p>
+        <p>
+          <img src="https://judhajitc.github.io/files/LandThumbnail.PNG" alt="Land as Collateral Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
+          <strong>
+            <a href="https://judhajitc.github.io/files/LandascollateralinIndia.pdf" target="_blank" rel="noopener">
+              Land as Collateral in India
+            </a>
+          </strong><br>
+          with Sudha Narayanan — <em>Economic and Political Weekly (2019)</em><br>
+          <small>
+            Media coverage:
+            <a href="https://www.livemint.com/news/india/why-indians-don-t-use-land-as-collateral-11573718470954.html" target="_blank" rel="noopener">Mint</a>
+          </small>
+        </p>
+        <div style="clear:both; height:1.2rem"></div>
 
-    <div style="clear:both; height:1.2rem"></div>
+        <p>
+          <img src="https://judhajitc.github.io/files/UrbanThumbnail.PNG" alt="Urbanization Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
+          <strong>
+            <a href="https://judhajitc.github.io/files/NO_LII_9_04032017_Judhajit_Chakraborty-EPW.pdf" target="_blank" rel="noopener">
+              An Unequal Process of Urbanization
+            </a>
+          </strong><br>
+          <em>Economic and Political Weekly (2017)</em>
+        </p>
+        <div style="clear:both;"></div>
 
-    <p>
-      <img src="https://judhajitc.github.io/files/LandThumbnail.PNG" alt="Land as Collateral Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
-      <strong>
-  <a href="https://judhajitc.github.io/files/LandascollateralinIndia.pdf" target="_blank" rel="noopener">
-    Land as Collateral in India
-  </a>
-</strong><br>
-with Sudha Narayanan — <em>Economic and Political Weekly (2019)</em><br>
-<small>
-  Media coverage:
-  <a href="https://www.livemint.com/news/india/why-indians-don-t-use-land-as-collateral-11573718470954.html" target="_blank" rel="noopener">Mint</a>
-</small>
-    </p>
+      </div>
+    </section>
 
-    <div style="clear:both; height:1.2rem"></div>
-
-    <p>
-      <img src="https://judhajitc.github.io/files/UrbanThumbnail.PNG" alt="Urbanization Thumbnail" width="140" style="float:left; margin-right:12px; margin-bottom:6px; border-radius:6px;">
-      <strong>
-  <a href="https://judhajitc.github.io/files/NO_LII_9_04032017_Judhajit_Chakraborty-EPW.pdf" target="_blank" rel="noopener">
-    An Unequal Process of Urbanization
-  </a>
-</strong><br>
-<em>Economic and Political Weekly (2017)</em>
-    </p>
-
-    <div style="clear:both;"></div>
-
-  </div>
-</section>
-    
     <hr/>
 
     <!-- CONTACT -->
@@ -369,8 +334,37 @@ with Sudha Narayanan — <em>Economic and Political Weekly (2019)</em><br>
       </p>
     </section>
 
+    <!-- Lightbox element -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <img id="lightbox-img" alt="">
+    </div>
+
   </main>
+
+  <!-- Lightbox script -->
+  <script>
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+
+      document.querySelectorAll('.thumb[data-large]').forEach(t => {
+        t.addEventListener('click', () => {
+          img.src = t.dataset.large;
+          lb.classList.add('show');
+          lb.setAttribute('aria-hidden','false');
+        });
+      });
+
+      // close on click outside image or Esc
+      lb.addEventListener('click', e => { if (e.target === lb) closeLB(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+
+      function closeLB(){
+        lb.classList.remove('show');
+        lb.setAttribute('aria-hidden','true');
+        img.removeAttribute('src');
+      }
+    })();
+  </script>
 </body>
 </html>
-
-
