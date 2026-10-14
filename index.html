@@ -12,83 +12,125 @@ permalink: /
   <title>Judhajit Chakraborty</title>
   <style>
     :root{
-      --bg:#fff; --fg:#111; --muted:#444; --line:#e9e9e9; --link:#5b34ff;
+      --bg:#fff; --fg:#111; --muted:#444; --line:#e9e9e9; --link:#5b34ff; --nav-h:56px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    html{scroll-behavior:smooth}
+    html,body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
     img{max-width:100%;height:auto;border-radius:8px}
-    .wrap{max-width:1024px;margin:24px auto;padding:0 16px}
+    .wrap{max-width:960px;margin:24px auto;padding:0 16px}
 
-    /* Header */
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
-    .hero h1{font-size:2rem;margin:0 0 .5rem 0}
-    .meta{display:flex;gap:12px;align-items:center;margin:.25rem 0 .75rem}
-    .meta a{display:inline-flex;gap:6px;align-items:center}
-    .pill{display:inline-block;margin-top:8px;padding:.35rem .6rem;border:1px solid var(--line);border-radius:8px;background:#fff;font-weight:600}
-    .blurb{margin:12px 0 10px;color:var(--muted)}
-    .list-compact{margin:.35rem 0 0 .9rem;padding:0}
-    .list-compact li{margin:.15rem 0}
-    hr{border:0;border-top:1px solid var(--line);margin:22px 0}
-    h2{font-size:1.35rem;margin:0 0 .5rem 0}
-    .micro{font-size:.82rem;line-height:1.35;color:#666}
-
-    /* ---------- Working Papers: plain rows (no boxes) ---------- */
-    .papers{display:flex;flex-direction:column;gap:26px}
-    .paper-row{
-      display:grid;
-      grid-template-columns:180px 1fr;
-      gap:16px; align-items:start;
-      border:none; background:transparent; box-shadow:none; padding:0; border-radius:0;
+    /* ---------- Top navigation ---------- */
+    .topnav{
+      position:sticky; top:0; z-index:100;
+      background:rgba(255,255,255,.95); backdrop-filter:blur(6px);
+      border-bottom:1px solid var(--line);
     }
+    .topnav .inner{
+      max-width:960px; margin:0 auto; padding:0 16px; min-height:var(--nav-h);
+      display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .topnav .brand{font-weight:700; color:var(--fg); font-size:1rem}
+    .topnav .brand:hover{text-decoration:none}
+    .topnav nav{display:flex; gap:4px; flex-wrap:wrap}
+    .topnav nav a{
+      color:#333; font-weight:600; font-size:.9rem;
+      padding:.35rem .7rem; border-radius:8px;
+    }
+    .topnav nav a:hover{background:#f2f2f2; text-decoration:none}
+    .topnav nav a.active{background:#eeeaff; color:var(--link)}
+    section[id], header[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
+
+    /* ---------- Header ---------- */
+    .hero{display:grid;grid-template-columns:1fr 210px;gap:32px;align-items:start}
+    .hero h1{font-size:1.75rem;margin:0 0 .4rem 0}
+    .hero .portrait{width:210px;height:auto;border-radius:10px}
+    .meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:.25rem 0 .75rem;font-size:.92rem}
+    .meta a{display:inline-flex;gap:6px;align-items:center}
+    .pill{display:inline-block;margin-top:4px;padding:.35rem .7rem;border:1px solid var(--line);border-radius:8px;background:#fff;font-weight:600}
+    .blurb{margin:10px 0;color:var(--muted)}
+    .jobmarket{font-weight:700;font-size:1rem;margin:8px 0 10px}
+    .list-compact{margin:.35rem 0 0 .9rem;padding:0}
+    .list-compact li{margin:.25rem 0}
+    hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+    h2{font-size:1.3rem;margin:0 0 .6rem 0}
+    h3.subhead{font-size:1.05rem;margin:1.1rem 0 .7rem;color:#222}
+    .micro{font-size:.8rem;line-height:1.35;color:#666;margin-top:.25rem}
+
+    /* ---------- Papers: plain rows ---------- */
+    .papers{display:flex;flex-direction:column;gap:24px}
+    .paper-row{display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:start}
     .paper-row .thumb{
-      width:180px; height:135px; /* 4:3 */
-      object-fit:cover; border:1px solid var(--line); background:#fff; border-radius:8px;
-      cursor:zoom-in;
+      width:160px;height:120px;object-fit:cover;
+      border:1px solid var(--line);background:#fff;border-radius:8px;cursor:zoom-in;
     }
     .paper-row .paper-body{min-width:0}
-    .paper-row .paper-body h3{margin-top:2px;font-size:1.15rem;line-height:1.35}
-    .paper-row .subtle{color:var(--muted);margin-top:.25rem}
+    .paper-row .paper-body h3{margin:2px 0 0;font-size:1.02rem;line-height:1.35}
+    .paper-row .subtle{color:var(--muted);margin-top:.25rem;font-size:.92rem}
 
     /* Inline abstract */
-    details.abstract-inline{margin:.55rem 0 0}
+    details.abstract-inline{margin:.5rem 0 0}
     details.abstract-inline > summary{
-      list-style:none; cursor:pointer; display:inline-block;
-      padding:.28rem .55rem; border-radius:8px; border:1px solid var(--line);
-      background:#efefef; font-weight:600; color:#222;
+      list-style:none;cursor:pointer;display:inline-block;
+      padding:.22rem .55rem;border-radius:8px;border:1px solid var(--line);
+      background:#efefef;font-weight:600;font-size:.85rem;color:#222;
     }
+    details.abstract-inline > summary::-webkit-details-marker{display:none}
     details.abstract-inline[open] > summary{background:#e7e7e7}
-    details.abstract-inline > div{margin:.5rem 0 0}
+    details.abstract-inline > div{margin:.5rem 0 0;font-size:.92rem}
 
-    /* Lightbox (shared by all thumbnails) */
-    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.72);
-      display:none; align-items:center; justify-content:center; z-index:9999}
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.72);
+      display:none;align-items:center;justify-content:center;z-index:9999}
     .lightbox.show{display:flex}
-    .lightbox img{max-width:90vw; max-height:90vh; border-radius:10px; box-shadow:0 12px 36px rgba(0,0,0,.45)}
+    .lightbox img{max-width:90vw;max-height:90vh;border-radius:10px;box-shadow:0 12px 36px rgba(0,0,0,.45)}
 
     /* Pre-Ph.D. thumbnails */
     .thumb-pre{
-      width:140px; float:left; margin-right:12px; margin-bottom:6px;
-      border-radius:6px; border:1px solid var(--line); cursor:zoom-in;
+      width:120px;float:left;margin-right:12px;margin-bottom:6px;
+      border-radius:6px;border:1px solid var(--line);cursor:zoom-in;
     }
+
+    footer{max-width:960px;margin:0 auto 24px;padding:0 16px;font-size:.8rem;color:#777}
+
     @media (max-width:700px){
-      .paper-row{grid-template-columns:120px 1fr}
-      .paper-row .thumb{width:120px;height:90px}
-      .thumb-pre{width:110px}
+      .hero{grid-template-columns:1fr}
+      .hero .portrait{width:150px;order:-1}
+      .hero > div:last-child{order:-1}
+      .paper-row{grid-template-columns:110px 1fr}
+      .paper-row .thumb{width:110px;height:82px}
+      .thumb-pre{width:100px}
+      .topnav nav a{padding:.3rem .5rem;font-size:.85rem}
     }
   </style>
 </head>
 <body>
+
+  <!-- TOP NAVIGATION -->
+  <div class="topnav">
+    <div class="inner">
+      <a class="brand" href="#about">Judhajit Chakraborty</a>
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="https://judhajitc.github.io/files/Judhajit%20Chakraborty%20CV.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
   <main class="wrap">
 
-    <!-- HERO -->
-    <header class="hero">
+    <!-- HERO / ABOUT -->
+    <header class="hero" id="about">
       <div>
         <h1>Judhajit Chakraborty</h1>
         <div class="meta">
           <a href="mailto:judhajit.chakraborty@colostate.edu">📧 judhajit.chakraborty@colostate.edu</a>
-          <a href="https://scholar.google.com/citations?user=NFVuuIIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=NFVuuIIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
           <a href="https://github.com/judhajitc" target="_blank" rel="noopener">GH @judhajitc</a>
         </div>
 
@@ -97,27 +139,17 @@ permalink: /
           I am currently a Postdoctoral Fellow in Agricultural and Resource Economics at Colorado State University. I study the short- to medium-run labor market and economic impacts of flash floods and floods in the U.S. This research is funded through the National Oceanic and Atmospheric Administration – National Weather Service.
         </p>
 
-       <p class="blurb">
-  I received my PhD from Michigan State University in 2024. <a href="https://www.proquest.com/openview/b34e6e718fa0dda71467dfc3a2646538/1?pq-origsite=gscholar&amp;cbl=18750&amp;diss=y" target="_blank" rel="noopener">My dissertation chapters</a> explored how covariate shocks shape perceptions of relative status through channels of objective economic losses as well as misperceptions; other chapters studied how frost shocks affect intimate partner violence; perceptions of government and civic participation in the Peruvian Highlands.
-</p>
+        <p class="blurb">
+          I received my PhD from Michigan State University in 2024. <a href="https://www.proquest.com/openview/b34e6e718fa0dda71467dfc3a2646538/1?pq-origsite=gscholar&amp;cbl=18750&amp;diss=y" target="_blank" rel="noopener">My dissertation chapters</a> explored how covariate shocks shape perceptions of relative status through channels of objective economic losses as well as misperceptions; other chapters studied how frost shocks affect intimate partner violence; perceptions of government and civic participation in the Peruvian Highlands.
+        </p>
 
-        <p style="font-weight:700; font-size:1.05rem; margin:6px 0 10px;">
-  I am on the 2026–2027 job market.
-</p>
+        <p class="jobmarket">I am on the 2026–2027 job market.</p>
 
         <p><a class="pill" href="https://judhajitc.github.io/files/Judhajit%20Chakraborty%20CV.pdf" target="_blank" rel="noopener">Download CV</a></p>
-
-        <div class="section">
-          <strong>Recent presentations:</strong>
-          <ul class="list-compact">
-            <li>AAEA Annual Meeting, 2025 (Denver)</li>
-            <li>AERE Sessions, 2025</li>
-          </ul>
-        </div>
       </div>
 
       <div>
-        <img src="https://judhajitc.github.io/files/profilepic.JPG" alt="Portrait of Judhajit Chakraborty" />
+        <img class="portrait" src="https://judhajitc.github.io/files/profilepic.JPG" alt="Portrait of Judhajit Chakraborty" />
       </div>
     </header>
 
@@ -127,9 +159,9 @@ permalink: /
     <section class="section" id="research">
       <h2>Research</h2>
 
-      <h3 style="margin:.25rem 0 .25rem">Publications</h3>
-       <div class="papers">
-    <!-- Publication 1 -->
+      <h3 class="subhead">Publications</h3>
+      <div class="papers">
+        <!-- Publication 1 -->
         <article class="paper-row">
           <img class="thumb"
                src="https://judhajitc.github.io/files/IPVThumbnail.PNG"
@@ -153,51 +185,39 @@ permalink: /
             </details>
           </div>
         </article>
+      </div>
 
-  </div>
-      <h3 style="margin:.25rem 0 .25rem">Working Papers</h3>
-
+      <h3 class="subhead">Working Papers</h3>
       <div class="papers">
 
-<!--Editing here-->
-
-
         <!-- Paper: Labor Market Impacts of Flooding in the United States -->
-<article class="paper-row">
-  <img class="thumb"
-       src="https://judhajitc.github.io/files/LaborMktThumbnail.PNG"
-       data-large="https://judhajitc.github.io/files/LaborMktThumbnail.PNG"
-       alt="Flood labor thumbnail">
-  <div class="paper-body">
-    <h3>
-      <a href="https://judhajitc.github.io/files/Labor%20Market%20Impacts%20of%20Flooding%20in%20the%20United%20States.pdf" target="_blank" rel="noopener">
-      Labor Market Impacts of Flooding in the United States
-      </a>
-    </h3>
+        <article class="paper-row">
+          <img class="thumb"
+               src="https://judhajitc.github.io/files/LaborMktThumbnail.PNG"
+               data-large="https://judhajitc.github.io/files/LaborMktThumbnail.PNG"
+               alt="Flood labor thumbnail">
+          <div class="paper-body">
+            <h3>
+              <a href="https://judhajitc.github.io/files/Labor%20Market%20Impacts%20of%20Flooding%20in%20the%20United%20States.pdf" target="_blank" rel="noopener">
+                Labor Market Impacts of Flooding in the United States
+              </a>
+            </h3>
+            <div class="subtle">
+              with Jude Bayham, Christopher Goemans, Dale Manning, Diellza Muriqi, and Jordan Suter
+            </div>
+            <div class="micro">
+              <strong>Presented at:</strong> 2025 AERE Summer Conference; 2025 WEAI-AERE Conference; 2025 AAEA Annual Conference; 2026 AMS Annual Conference; 7th <a href="https://wcere2026.org/" target="_blank" rel="noopener">World Congress of Environmental and Resource Economists</a>, Lisbon, Portugal.
+            </div>
+            <details class="abstract-inline">
+              <summary>Read Abstract</summary>
+              <div>
+                <p>This study investigates the labor market consequences of floods -- historically among the most lethal and expensive natural disasters in the United States. Using quarterly, county-level employment and wage data spanning 1996-2023, our empirical approach distinguishes between flash floods and floods with gradual, slower onset patterns (non-flash floods). The empirical results show that an additional day of flash floods in a quarter reduces county-level employment and wages by 0.13% and 0.15% respectively. We find that total wages diminished by an average of $6.2 billion per year (in 2023 USD) between 1996 and 2023 as a result of flash and non-flash floods. Sectoral analyses show that wage impacts occur in both goods-producing and service sectors while goods-producing sectors drive employment effects. Heterogeneous effects reveal that economically vulnerable counties experience larger negative impacts from both flood types and that both coastal and inland counties face negative economic disruptions. Taken together, the sub-annual analysis uncovers labor market disruptions that are masked in annual aggregates, advancing understanding of flood impacts and informing the design of policies to build resilience against shocks.</p>
+              </div>
+            </details>
+          </div>
+        </article>
 
-    <div style="font-style: italic; font-size: 0.85rem; color: #444; margin-top: -6px;">
-    <!--  Under Review -->
-    </div>
-
-    <div class="subtle">
-      with Jude Bayham, Christopher Goemans, Dale Manning, Diellza Muriqi, and Jordan Suter
-    </div>
-<div class="micro">
-  <strong>Presented at:</strong> 2025 AERE Summer Conference; 2025 WEAI-AERE Conference; 2025 AAEA Annual Conference; 2026 AMS Annual Conference; 7th <a href="https://wcere2026.org/">World Congress of Environmental and Resource Economists</a>, Lisbon, Portugal.
-</div>
-    <details class="abstract-inline">
-      <summary>Read Abstract</summary>
-      <div>
-        <p>
-          This study investigates the labor market consequences of floods -- historically among the most lethal and expensive natural disasters in the United States. Using quarterly, county-level employment and wage data spanning 1996-2023, our empirical approach distinguishes between flash floods and floods with gradual, slower onset patterns (non-flash floods).  The empirical results show that an additional day of flash floods in a quarter reduces county-level employment and wages by 0.13% and 0.15% respectively. We find that total wages diminished by an average of  $6.2 billion per year (in 2023 USD) between 1996 and 2023 as a result of flash and non-flash floods. Sectoral analyses show that wage impacts occur in both goods-producing and service sectors while goods-producing sectors drive employment effects. Heterogeneous effects reveal that economically vulnerable counties experience larger negative impacts from both flood types and that both coastal and inland counties face negative economic disruptions. Taken together, the sub-annual analysis uncovers labor market disruptions that are masked in annual aggregates, advancing understanding of flood impacts and informing the design of policies to build resilience against shocks.        </p>
-      </div>
-    </details>
-  </div>
-</article>
-
-
-        
-        <!-- Paper 1 -->
+        <!-- Paper: Perceived Relative Deprivation -->
         <article class="paper-row">
           <img class="thumb"
                src="https://judhajitc.github.io/files/PRDThumbnail.PNG"
@@ -209,45 +229,21 @@ permalink: /
                 Can Covariate Shocks Affect Perceived Relative Deprivation? Evidence using Excess Rainfall Shocks in Peru
               </a>
             </h3>
-            <div style="font-style: italic; font-size: 0.85rem; color: #444; margin-top: -6px;">
-  <!--Under Review -->
-</div>
             <div class="subtle">Judhajit Chakraborty</div>
             <div class="micro">
-              <a href="https://www.econthatmatters.com/2023/12/downpours-of-deprivation-exploring-the-impact-of-excess-rainfall-shocks-on-perceived-relative-deprivation-in-peru/" target="_blank" rel="noopener">
-                Blog: Economics That Really Matters
-              </a>
+              <a href="https://www.econthatmatters.com/2023/12/downpours-of-deprivation-exploring-the-impact-of-excess-rainfall-shocks-on-perceived-relative-deprivation-in-peru/" target="_blank" rel="noopener">Blog: Economics That Really Matters</a>
               · <strong>Presented at:</strong> 2026 Ahmedabad University, 2026 IIM Calcutta, 2024 DARE Seminar (CSU); 2024 SEEDS (Georgia Tech); Midwest Intl. Dev. 2024 (UChicago); Seminario MAP, Peru (Online); PacDev 2024 (Stanford King Center); AAEA 2023; Dev Lunch 2023 (MSU)
             </div>
-
             <details class="abstract-inline">
               <summary>Read Abstract</summary>
               <div>
-                <p>Perceptions of relative deprivation affect a range of economic and behavioral outcomes, such
-as support for redistribution, political attitudes, and risky behavior. There is scarce evidence
-regarding how covariate shocks that affect entire communities shape such perceptions. Using
-nationally representative panel data from Peru, and exploiting within-household variation
-in exposure to excess rainfall shocks (a covariate shock), I examine how such shocks shape
-households’ perceptions of standard of living relative to others in their locality – a measure of
-perceived relative deprivation. I find that excess rainfall shocks increase households’ perception
-of relative deprivation on average, as well as across both poor and non-poor households. The
-increase in perceived relative deprivation among poor households can be partially explained by
-the disproportionate economic losses that they experience following these shocks. However,
-this is not true for non-poor households who suffer no significant economic losses. Finally,
-households also systematically misperceive and underestimate neighbors’ welfare losses. This
-is a more salient explanation for the increased perceived relative deprivation among non-poor
-households following a shock. Suggestive evidence indicates participation in local neighborhood
-associations, which provide access to heterogeneous networks, can weaken such misperceptions.
-Additionally, access to social protection programs, such as conditional cash transfers and in-kind
-food assistance, attenuates the effect of these shocks on perceived relative deprivation. The
-paper informs our understanding of why demand for redistribution may remain muted during
-episodes of rising inequality and poverty, and reveal the potential limitations of communitybased poverty targeting methods during crisis periods.</p>
+                <p>Perceptions of relative deprivation affect a range of economic and behavioral outcomes, such as support for redistribution, political attitudes, and risky behavior. There is scarce evidence regarding how covariate shocks that affect entire communities shape such perceptions. Using nationally representative panel data from Peru, and exploiting within-household variation in exposure to excess rainfall shocks (a covariate shock), I examine how such shocks shape households’ perceptions of standard of living relative to others in their locality – a measure of perceived relative deprivation. I find that excess rainfall shocks increase households’ perception of relative deprivation on average, as well as across both poor and non-poor households. The increase in perceived relative deprivation among poor households can be partially explained by the disproportionate economic losses that they experience following these shocks. However, this is not true for non-poor households who suffer no significant economic losses. Finally, households also systematically misperceive and underestimate neighbors’ welfare losses. This is a more salient explanation for the increased perceived relative deprivation among non-poor households following a shock. Suggestive evidence indicates participation in local neighborhood associations, which provide access to heterogeneous networks, can weaken such misperceptions. Additionally, access to social protection programs, such as conditional cash transfers and in-kind food assistance, attenuates the effect of these shocks on perceived relative deprivation. The paper informs our understanding of why demand for redistribution may remain muted during episodes of rising inequality and poverty, and reveal the potential limitations of community-based poverty targeting methods during crisis periods.</p>
               </div>
             </details>
           </div>
         </article>
 
-        <!-- Paper 3 -->
+        <!-- Paper: Cold and Democracy -->
         <article class="paper-row">
           <img class="thumb"
                src="https://judhajitc.github.io/files/DemocracyThumbnail.PNG"
@@ -260,17 +256,16 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
               </a>
             </h3>
             <div class="subtle">with Eduardo Nakasone and Leah Lakdawala</div>
-
             <details class="abstract-inline">
               <summary>Read Abstract</summary>
               <div>
-                <p> When a shock reveals that the state does not protect them, citizens may reject the political system, punish those in office, or withdraw. We ask which response prevails in the Peruvian highlands, using exposure to cold as the shock. We match twelve rounds of the national household survey to hourly temperatures at each household's location and identify the effects of cold from the variation in the timing of interviews within districts. Cold lowers farm revenue, kills livestock, and makes vulnerable household members more likely to fall ill and require medical attention. Households conclude that democracy delivers less: they become less likely to believe that democracy works well and that the rights it promises are respected, while support for democracy as a principle and confidence in specific institutions do not change. They withdraw rather than punish: absenteeism rises in presidential and municipal elections despite mandatory voting, but incumbent mayors are not punished; participation in community associations rises, and individual identity shifts from the state to indigenous groups. The erosion of support is concentrated where Peru's main cash transfer program reaches few of the poor, suggesting that social protection shields the relationship between citizens and democracy when extreme weather strikes. </p>
+                <p>When a shock reveals that the state does not protect them, citizens may reject the political system, punish those in office, or withdraw. We ask which response prevails in the Peruvian highlands, using exposure to cold as the shock. We match twelve rounds of the national household survey to hourly temperatures at each household's location and identify the effects of cold from the variation in the timing of interviews within districts. Cold lowers farm revenue, kills livestock, and makes vulnerable household members more likely to fall ill and require medical attention. Households conclude that democracy delivers less: they become less likely to believe that democracy works well and that the rights it promises are respected, while support for democracy as a principle and confidence in specific institutions do not change. They withdraw rather than punish: absenteeism rises in presidential and municipal elections despite mandatory voting, but incumbent mayors are not punished; participation in community associations rises, and individual identity shifts from the state to indigenous groups. The erosion of support is concentrated where Peru's main cash transfer program reaches few of the poor, suggesting that social protection shields the relationship between citizens and democracy when extreme weather strikes.</p>
               </div>
             </details>
           </div>
         </article>
 
-                <!-- Paper: Peru COVID Project -->
+        <!-- Paper: Peru COVID Project -->
         <article class="paper-row">
           <img class="thumb"
                src="https://judhajitc.github.io/files/perucovid.PNG"
@@ -283,7 +278,6 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
               </a>
             </h3>
             <div class="subtle">with Eduardo Nakasone and Leah Lakdawala</div>
-
             <details class="abstract-inline">
               <summary>Read Abstract</summary>
               <div>
@@ -293,44 +287,17 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
           </div>
         </article>
 
-        
       </div> <!-- /.papers -->
 
-      <div class="section">
-        <h3 style="margin:.75rem 0 .35rem">Work in Progress</h3>
-        <ul class="list-compact">
-          <!--<li>Labor Market Impacts of Flooding in the United States (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham, Diellza Muriqi) - <em>Manuscript in preparation</em></li> -->
-          <li>Flooding and Local Economic Activity: Evidence Using High-Frequency Data on Mobility and Spending for the Contiguous U.S. (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham)</li>
-           <!--<li><li>Impact of COVID mortality on voting behavior: Evidence from Peru (with Eduardo Nakasone and Leah Lakdawala)</li> -->
-          <!--<li>Who Owns What? Evidence from Digitized Asset Declarations of Public Employees in an Indian State</li> -->
-        </ul>
-      </div>
-    </section>
-
-    <hr/>
-
-    <!-- TEACHING -->
-    <section class="section" id="teaching">
-      <h2>Teaching</h2>
+      <h3 class="subhead">Work in Progress</h3>
       <ul class="list-compact">
-        <li>Instructor of Record - AFRE 203: Data Analysis for the Agri-Food System (Spring &amp; Summer 2022)</li>
-        <li>Instructor of Record - AFRE 303: Managerial Economics (Spring &amp; Summer 2023; Summer 2024)</li>
+        <li>Flooding and Local Economic Activity: Evidence Using High-Frequency Data on Mobility and Spending for the Contiguous U.S. (with Dale Manning, Jordan Suter, Chris Goemans, Jude Bayham)</li>
+        <!--<li>Who Owns What? Evidence from Digitized Asset Declarations of Public Employees in an Indian State</li> -->
       </ul>
-      <p class="micro" style="margin-top:.35rem">
-        Teaching evaluations:
-        <a href="https://judhajitc.github.io/files/Teaching%20Evaluation.pdf" target="_blank" rel="noopener">All courses</a>
-      </p>
-    </section>
 
-    <!-- PRE-PHD PUBLICATIONS -->
-    <section class="section" id="prephd">
-      <h2>Pre-Ph.D. Peer-Reviewed Publications</h2>
-
-      <div class="section" style="margin-top:1rem">
-
+      <h3 class="subhead" id="prephd">Pre-Ph.D. Peer-Reviewed Publications</h3>
+      <div>
         <p>
-          <!-- If you have a Foundry thumbnail, uncomment and set data-large -->
-          <!-- <img class="thumb-pre" src="https://judhajitc.github.io/files/FoundryThumbnail.PNG" data-large="https://judhajitc.github.io/files/FoundryThumbnail.PNG" alt="Foundry Thumbnail"> -->
           <strong>
             <a href="https://www.cambridge.org/core/books/industrialisation-for-employment-and-growth-in-india/C038DB4557F1361E61C47276BAB2DBB7" target="_blank" rel="noopener">
               Continued Misery or a Change in Fortune? The Case of the Howrah Foundry Industry
@@ -339,7 +306,7 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
           <em>Book Chapter in <strong>Industrialisation for Employment and Growth in India</strong>, Cambridge University Press (2021)</em>
         </p>
 
-        <div style="clear:both; height:1.2rem"></div>
+        <div style="clear:both; height:1rem"></div>
 
         <p>
           <img class="thumb-pre"
@@ -359,7 +326,7 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
           </small>
         </p>
 
-        <div style="clear:both; height:1.2rem"></div>
+        <div style="clear:both; height:1rem"></div>
 
         <p>
           <img class="thumb-pre"
@@ -378,7 +345,7 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
           </small>
         </p>
 
-        <div style="clear:both; height:1.2rem"></div>
+        <div style="clear:both; height:1rem"></div>
 
         <p>
           <img class="thumb-pre"
@@ -399,6 +366,21 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
 
     <hr/>
 
+    <!-- TEACHING -->
+    <section class="section" id="teaching">
+      <h2>Teaching</h2>
+      <ul class="list-compact">
+        <li>Instructor of Record - AFRE 203: Data Analysis for the Agri-Food System (Spring &amp; Summer 2022)</li>
+        <li>Instructor of Record - AFRE 303: Managerial Economics (Spring &amp; Summer 2023; Summer 2024)</li>
+      </ul>
+      <p class="micro" style="margin-top:.5rem">
+        Teaching evaluations:
+        <a href="https://judhajitc.github.io/files/Teaching%20Evaluation.pdf" target="_blank" rel="noopener">All courses</a>
+      </p>
+    </section>
+
+    <hr/>
+
     <!-- CONTACT -->
     <section class="section" id="contact">
       <h2>Contact</h2>
@@ -415,13 +397,13 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
 
   </main>
 
-  <!-- Lightbox script -->
+  <footer>© 2026 Judhajit Chakraborty. All rights reserved.</footer>
+
   <script>
     (function(){
+      // Lightbox for thumbnails
       const lb = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
-
-      // Bind to both working-paper and pre-PhD thumbnails
       document.querySelectorAll('.thumb[data-large], .thumb-pre[data-large]').forEach(t => {
         t.addEventListener('click', () => {
           img.src = t.dataset.large;
@@ -429,19 +411,27 @@ episodes of rising inequality and poverty, and reveal the potential limitations 
           lb.setAttribute('aria-hidden','false');
         });
       });
-
-      // close on click outside image or Esc
       lb.addEventListener('click', e => { if (e.target === lb) closeLB(); });
       document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
-
       function closeLB(){
         lb.classList.remove('show');
         lb.setAttribute('aria-hidden','true');
         img.removeAttribute('src');
       }
+
+      // Highlight the nav tab for the section in view
+      const links = document.querySelectorAll('.topnav nav a[href^="#"]');
+      const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+      function setActive(){
+        let current = sections[0];
+        const y = window.scrollY + 90;
+        sections.forEach(s => { if (s.offsetTop <= y) current = s; });
+        if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = sections[sections.length - 1];
+        links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current.id));
+      }
+      window.addEventListener('scroll', setActive, {passive:true});
+      setActive();
     })();
   </script>
-
-  <footer>© 2025 Judhajit Chakraborty. All rights reserved.</footer>
 </body>
 </html>
