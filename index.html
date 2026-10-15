@@ -93,6 +93,20 @@ permalink: /
       border-radius:6px;border:1px solid var(--line);cursor:zoom-in;
     }
 
+    /* ---------- Teaching ---------- */
+    .courses{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .course{border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+    .course h3{margin:0;font-size:1rem;line-height:1.35}
+    .course .subtle{color:var(--muted);font-size:.85rem;margin-top:.2rem}
+    .stats{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .stat{display:grid;grid-template-columns:86px 1fr;gap:10px;align-items:baseline}
+    .stat b{font-size:1.15rem;color:var(--link);white-space:nowrap}
+    .stat b small{font-size:.75rem;color:#777;font-weight:600}
+    .stat span{font-size:.85rem;color:#444;line-height:1.35}
+    .quotes{display:flex;flex-direction:column;gap:10px}
+    .quotes blockquote{margin:0;padding:8px 12px;border-left:3px solid var(--link);background:#f7f5ff;border-radius:0 8px 8px 0;font-size:.9rem;font-style:italic}
+    .quotes cite{display:block;font-style:normal;font-size:.78rem;color:#666;margin-top:3px}
+
     footer{max-width:960px;margin:0 auto 24px;padding:0 16px;font-size:.8rem;color:#777}
 
     @media (max-width:700px){
@@ -102,6 +116,7 @@ permalink: /
       .paper-row{grid-template-columns:110px 1fr}
       .paper-row .thumb{width:110px;height:82px}
       .thumb-pre{width:100px}
+      .courses{grid-template-columns:1fr}
       .topnav nav a{padding:.3rem .5rem;font-size:.85rem}
     }
   </style>
@@ -369,13 +384,46 @@ permalink: /
     <!-- TEACHING -->
     <section class="section" id="teaching">
       <h2>Teaching</h2>
-      <ul class="list-compact">
-        <li>Instructor of Record - AFRE 203: Data Analysis for the Agri-Food System (Spring &amp; Summer 2022)</li>
-        <li>Instructor of Record - AFRE 303: Managerial Economics (Spring &amp; Summer 2023; Summer 2024)</li>
-      </ul>
-      <p class="micro" style="margin-top:.5rem">
-        Teaching evaluations:
-        <a href="https://judhajitc.github.io/files/Teaching%20Evaluation.pdf" target="_blank" rel="noopener">All courses</a>
+      <p class="blurb" style="margin-top:0">Instructor of record at Michigan State University, 2022–2024.</p>
+
+      <div class="courses">
+        <!-- Course: AFRE 203 -->
+        <article class="course">
+          <h3>AFRE 203: Data Analysis for the Agri-Food System</h3>
+          <div class="subtle">Spring 2022 (in person, 68 students) · Summer 2022 (online)</div>
+          <div class="stats">
+            <div class="stat"><b>85%</b><span>rated my concern for student learning superior or above average</span></div>
+            <div class="stat"><b>85%</b><span>rated their improvement in competence superior or above average</span></div>
+            <div class="stat"><b>100%</b><span>rated every instructor item superior or above average (Summer 2022)</span></div>
+          </div>
+        </article>
+
+        <!-- Course: AFRE 303 -->
+        <article class="course">
+          <h3>AFRE 303: Managerial Economics</h3>
+          <div class="subtle">Spring 2023 (in person, co-taught) · Summer 2023 &amp; Summer 2024 (online)</div>
+          <div class="stats">
+            <div class="stat"><b>4.6<small>/5</small></b><span>assignments and tests let students demonstrate understanding (2024)</span></div>
+            <div class="stat"><b>4.4<small>/5</small></b><span>course expanded students' understanding of the subject (2024)</span></div>
+            <div class="stat"><b>3.9 → 4.2</b><span>mean student rating, Summer 2023 to Summer 2024</span></div>
+          </div>
+        </article>
+      </div>
+
+      <details class="abstract-inline" style="margin-top:.9rem">
+        <summary>Student Comments</summary>
+        <div class="quotes">
+          <blockquote>“This course was one of the most well-organized courses I have taken and the instructor was very caring and interested in the students’ success.”<cite>AFRE 203, Spring 2022</cite></blockquote>
+          <blockquote>“No comment, this is the perfect class.”<cite>AFRE 203, Spring 2022</cite></blockquote>
+          <blockquote>“I found I learned quite a lot in this class and I am very happy to have Professor Chakraborty as an instructor.”<cite>AFRE 303, Summer 2024</cite></blockquote>
+          <blockquote>“He was very organized and understanding of students’ schedules. He graded timely.”<cite>AFRE 303, Summer 2024</cite></blockquote>
+          <blockquote>“You have by far surpassed other professors in being helpful and understanding… In my four years at State, you will always be one of my favorite professors.”<cite>Email from a student</cite></blockquote>
+        </div>
+      </details>
+
+      <p class="micro" style="margin-top:.75rem">
+        Full summary with scores for every course:
+        <a href="https://judhajitc.github.io/files/Teaching%20Evaluation.pdf" target="_blank" rel="noopener">Teaching Evaluations (PDF)</a>
       </p>
     </section>
 
